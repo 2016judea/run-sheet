@@ -58,21 +58,21 @@ def fig_signal() -> str:
     s = defs("a1")
     s += f'<rect x="20" y="30" width="110" height="54" rx="3" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<circle cx="45" cy="57" r="9" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>'
-    s += t(90, 54, "lane-full", 10) + t(90, 68, "light", 10)
+    s += t(90, 54, "lane-full", 12) + t(90, 68, "light", 12)
     s += f'<rect x="20" y="116" width="110" height="54" rx="3" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="36" y="130" width="18" height="26" rx="3" fill="none" stroke="{INK}" stroke-width="2"/>'
-    s += t(90, 140, "RF gun", 10) + t(90, 154, "scans", 10)
+    s += t(90, 140, "RF gun", 12) + t(90, 154, "scans", 12)
     s += f'<path d="M130 57 L190 95" stroke="{INK}" stroke-width="2" fill="none" marker-end="url(#a1)"/>'
     s += f'<path d="M130 143 L190 105" stroke="{INK}" stroke-width="2" fill="none" marker-end="url(#a1)"/>'
     s += f'<rect x="192" y="80" width="70" height="40" rx="20" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>'
     s += t(227, 104, "JOIN", 11, "middle", INK, MONO, "bold")
     s += f'<path d="M262 100 L312 100" stroke="{INK}" stroke-width="2" marker-end="url(#a1)"/>'
     s += f'<rect x="314" y="72" width="86" height="56" rx="3" fill="#fff" stroke="{INK}" stroke-width="2"/>'
-    s += t(357, 95, "“door 7 is", 10) + t(357, 110, "backed up, go”", 10)
+    s += t(357, 95, "“door 7 is", 12) + t(357, 110, "backed up, go”", 12)
     s += f'<path d="M30 200 H400" stroke="{PALE}" stroke-width="1" stroke-dasharray="3 3"/>'
     s += f'<path d="M60 230 C 120 200, 300 200, 360 230 C 300 260, 120 260, 60 230 Z" fill="none" stroke="{RED}" stroke-width="2" stroke-dasharray="6 4"/>'
     s += f'<circle cx="60" cy="230" r="6" fill="{RED}"/>'
-    s += t(210, 234, "the lead walking the wall all shift = a person polling the same two signals", 9.5, "middle", RED, SANS)
+    s += t(210, 234, "the lead walking the wall all shift = a person polling the same two signals", 11, "middle", RED, SANS)
     return fig(s, "Two signals the building already gives off, joined once, replace a ten-hour walk.",
                "A lane-full light and RF scans joined into one message to the nearest free person; below, the loop the shift lead walks to do the same job by hand.", "0 0 420 270")
 
@@ -81,9 +81,9 @@ def fig_deadend_pair() -> str:
     a = defs("a2")
     a += f'<rect x="20" y="16" width="280" height="44" rx="22" fill="none" stroke="{INK}" stroke-width="2"/>' + t(160, 43, "SORTER")
     a += f'<path d="M160 60V98" stroke="{INK}" stroke-width="2" marker-end="url(#a2)"/>'
-    a += f'<rect x="138" y="100" width="44" height="54" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>' + t(160, 132, "FULL", 10, "middle", INK, MONO, "bold")
+    a += f'<rect x="138" y="100" width="44" height="54" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>' + t(160, 132, "FULL", 12, "middle", INK, MONO, "bold")
     a += f'<path d="M182 128 Q238 128 238 60" stroke="{RED}" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#a2)"/>'
-    a += t(246, 100, "recirc, then", 9.5, "start", RED) + t(246, 112, "problem solve", 9.5, "start", RED)
+    a += t(246, 100, "recirc, then", 11, "start", RED) + t(246, 112, "problem solve", 11, "start", RED)
     a += t(160, 176, "one destination → one chute", 11, "middle", INK, SANS, "600")
     b = f'<rect x="20" y="16" width="280" height="44" rx="22" fill="none" stroke="{INK}" stroke-width="2"/>' + t(160, 43, "SORTER")
     b += f'<path d="M50 60V96M95 60V96M140 60V96M185 60V96M230 60V96M275 60V96" stroke="{INK}" stroke-width="2" fill="none"/>'
@@ -105,39 +105,39 @@ def fig_three_full() -> str:
     s += f'<rect x="62" y="38" width="56" height="30" fill="#fff" stroke="{INK}" stroke-width="2" transform="rotate(-18 90 53)"/>'
     s += f'<rect x="58" y="152" width="64" height="60" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="60" y="184" width="60" height="26" fill="{PALE}"/>'
-    s += t(90, 232, "sortation full", 13, "middle", INK, SANS, "600") + t(90, 246, "beam blocked, gaylord half empty", 11)
+    s += t(90, 232, "sortation full", 13, "middle", INK, SANS, "600") + t(90, 247, "beam blocked,", 11) + t(90, 261, "box half empty", 11)
     s += f'<path d="M200 20 L200 110 L230 150 L270 150 L300 110 L300 20" fill="none" stroke="{INK}" stroke-width="2"/>'
     s += f'<line x1="204" y1="60" x2="296" y2="60" stroke="{PALE}" stroke-width="1.5" stroke-dasharray="3 3"/>'
     s += f'<circle cx="200" cy="60" r="5" fill="#fff" stroke="{INK}" stroke-width="1.5"/>'
     s += f'<rect x="218" y="152" width="64" height="60" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="220" y="154" width="60" height="56" fill="{PALE}"/>'
-    s += t(250, 232, "container full", 13, "middle", INK, SANS, "600") + t(250, 246, "no light, no room left", 11)
+    s += t(250, 232, "container full", 13, "middle", INK, SANS, "600") + t(250, 247, "no light,", 11) + t(250, 261, "no room left", 11)
     s += f'<rect x="350" y="80" width="130" height="70" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="352" y="112" width="60" height="36" fill="{PALE}"/><rect x="414" y="126" width="30" height="22" fill="{PALE}"/>'
     s += f'<circle cx="372" cy="158" r="7" fill="none" stroke="{INK}" stroke-width="2"/><circle cx="460" cy="158" r="7" fill="none" stroke="{INK}" stroke-width="2"/>'
     s += t(415, 102, "air", 13, "middle", RED, MONO, "bold")
-    s += t(415, 232, "trailer cube", 13, "middle", INK, SANS, "600") + t(415, 246, "closed early, shipped air", 11)
+    s += t(415, 232, "trailer cube", 13, "middle", INK, SANS, "600") + t(415, 247, "closed early,", 11) + t(415, 261, "shipped air", 11)
     return fig(s, "One photo-eye, three questions. Decide which one your action serves.",
-               "Three panels: a chute whose beam is blocked by a wedged box over a half-empty gaylord; a gaylord truly full with the beam clear; a trailer leaving with empty cube.", "0 0 500 256")
+               "Three panels: a chute whose beam is blocked by a wedged box over a half-empty gaylord; a gaylord truly full with the beam clear; a trailer leaving with empty cube.", "0 0 500 272")
 
 
 def fig_slammed() -> str:
     s = defs("a4")
     s += f'<path d="M40 180 H460 M40 180 V20" stroke="{INK}" stroke-width="1.5" fill="none"/>'
-    s += t(250, 198, "minutes →", 10) + t(14, 100, "work", 10)
+    s += t(250, 198, "minutes →", 12) + t(14, 100, "work", 12)
     s += f'<rect x="300" y="21" width="80" height="158" fill="{PALE}" opacity=".45"/><rect x="380" y="21" width="80" height="158" fill="{PALE}" opacity=".25"/>'
-    s += t(340, 36, "next 15", 9) + t(420, 36, "15–30", 9)
+    s += t(340, 36, "next 15", 11) + t(420, 36, "15–30", 11)
     s += f'<path d="M40 165 L120 160 L180 158 L230 150 L260 120 L290 70 L320 50 L360 45 L400 60 L460 65" fill="none" stroke="{INK}" stroke-width="2"/>'
-    s += t(292, 62, "inbound to the lane", 9.5, "end", INK, SANS)
+    s += t(292, 62, "inbound to the lane", 11, "end", INK, SANS)
     s += f'<path d="M40 170 L230 168 L260 150 L290 110 L320 75 L340 40" fill="none" stroke="{AMBER}" stroke-width="3"/>'
-    s += t(352, 88, "freight sitting on it", 9.5, "start", INK, SANS)
+    s += t(352, 88, "freight sitting on it", 11, "start", INK, SANS)
     s += f'<line x1="300" y1="20" x2="300" y2="180" stroke="{RED}" stroke-width="1.5" stroke-dasharray="4 3"/>'
     s += f'<circle cx="300" cy="94" r="6" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>'
-    s += t(300, 14, "light trips", 9.5, "middle", RED)
+    s += t(300, 14, "light trips", 11, "middle", RED)
     s += f'<line x1="345" y1="20" x2="345" y2="180" stroke="{RED}" stroke-width="1.5" stroke-dasharray="4 3"/>'
-    s += t(345, 190, "help arrives", 9.5, "middle", RED)
+    s += t(345, 190, "help arrives", 11, "middle", RED)
     s += f'<path d="M232 150 L258 123" stroke="{INK}" stroke-width="1" fill="none" marker-end="url(#a4)"/>'
-    s += t(228, 146, "looked fine here", 9, "end", INK, SANS)
+    s += t(228, 146, "looked fine here", 11, "end", INK, SANS)
     return fig(s, "The light is the end state. The inbound that caused it was visible fifteen minutes earlier.",
                "Line chart: inbound to a lane triples over ten minutes; freight on the lane lags then climbs; the lane-full light trips at the peak and help arrives later still; shaded bands show the 15 and 30 minute forecast windows.", "0 0 480 204")
 
@@ -145,56 +145,57 @@ def fig_slammed() -> str:
 def fig_ghosts() -> str:
     s = ""
     s += f'<path d="M40 170 H460 M40 170 V20" stroke="{INK}" stroke-width="1.5" fill="none"/>'
-    s += t(250, 190, "how long a piece sits on the lane →", 10) + t(14, 95, "count", 10)
+    s += t(250, 192, "how long a piece sits on the lane →", 12) + t(20, 14, "count", 11, "start")
     bars = [150, 120, 70, 42, 26, 16, 10, 7, 5, 4, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1]
     for i, hgt in enumerate(bars):
         x = 44 + i * 20
         s += f'<rect x="{x}" y="{170 - hgt}" width="16" height="{hgt}" fill="{PALE if i < 8 else "#fff"}" stroke="{INK}" stroke-width="1"/>'
     s += f'<rect x="204" y="21" width="256" height="149" fill="{RED}" opacity=".07"/>'
     s += f'<line x1="204" y1="20" x2="204" y2="170" stroke="{INK}" stroke-width="2"/>'
-    s += t(204, 14, "99th percentile of real work", 9.5, "middle", INK, MONO, "bold")
+    s += t(204, 14, "99th percentile of real work", 11, "middle", INK, MONO, "bold")
     s += f'<line x1="440" y1="20" x2="440" y2="170" stroke="{RED}" stroke-width="2" stroke-dasharray="5 4"/>'
-    s += t(436, 40, "the round number", 9.5, "end", RED) + t(436, 52, "in the config", 9.5, "end", RED)
-    s += t(330, 100, "ghosts the system", 10, "middle", RED, SANS, "600") + t(330, 114, "counts as work", 10, "middle", RED, SANS, "600")
+    s += t(436, 40, "the round number", 11, "end", RED) + t(436, 52, "in the config", 11, "end", RED)
+    s += t(330, 100, "ghosts the system", 12, "middle", RED, SANS, "600") + t(330, 114, "counts as work", 12, "middle", RED, SANS, "600")
     return fig(s, "Set the cutoff where real work actually ends. Everything between that and the round number is a ghost.",
                "Histogram of dwell time with a long tail; a solid line at the 99th percentile of real work, a dashed red line far to the right at an unmeasured round-number cutoff; the region between is shaded as ghosts.", "0 0 480 200")
 
 
 def fig_size_it() -> str:
     s = ""
-    s += f'<path d="M150 20 V190" stroke="{INK}" stroke-width="1.5"/>'
-    rows = [("trailer reposition", 170, True), ("return an empty", 110, True), ("bobtail", -30, False), ("pool swap", -60, False)]
+    ax = 230
+    s += f'<path d="M{ax} 20 V200" stroke="{INK}" stroke-width="1.5"/>'
+    rows = [("trailer reposition", 180, True), ("return an empty", 120, True), ("bobtail", -36, False), ("pool swap", -70, False)]
     for i, (lab, w, pos) in enumerate(rows):
-        y = 34 + i * 40
-        s += t(142, y + 15, lab, 10, "end")
+        y = 34 + i * 42
+        s += t(ax - 8, y + 16, lab, 12, "end")
         if pos:
-            s += f'<rect x="150" y="{y}" width="{w}" height="22" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>'
-            s += t(150 + w + 6, y + 15, "tours with it cost more", 9, "start", INK, SANS)
+            s += f'<rect x="{ax}" y="{y}" width="{w}" height="24" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>'
+            s += t(ax + 8, y + 16, "costs more", 11, "start", INK, SANS, "600")
         else:
-            s += f'<rect x="{150 + w}" y="{y}" width="{-w}" height="22" fill="#fff" stroke="{INK}" stroke-width="1.5"/>'
-            s += t(150 + w - 6, y + 15, "cheaper", 9, "end", INK, SANS)
-    s += t(150, 206, "tour cost with this empty leg − tour cost without it", 9.5, "middle", INK, SANS)
+            s += f'<rect x="{ax + w}" y="{y}" width="{-w}" height="24" fill="#fff" stroke="{INK}" stroke-width="1.5"/>'
+            s += t(ax + 8, y + 16, "cheaper", 11, "start", INK, SANS, "600")
+    s += t(ax, 222, "tour cost with this empty leg − tour cost without it", 11, "middle", INK, SANS)
     return fig(s, "Split deadhead by cause, then compare tours with the cause against tours without. Some causes cost money. Some come with cheaper tours and are not the target.",
-               "Horizontal bar chart of cost delta by empty-movement cause: trailer repositioning and returning empties are positive and large; bobtail and pool swaps are negative.", "0 0 400 214")
+               "Horizontal bar chart of cost delta by empty-movement cause: trailer repositioning and returning empties are positive and large; bobtail and pool swaps are negative.", "0 0 480 232")
 
 
 def fig_touches() -> str:
     s = defs("a7")
 
     def node(x, y, lab, fill="#fff"):
-        return f'<rect x="{x - 26}" y="{y - 14}" width="52" height="28" rx="3" fill="{fill}" stroke="{INK}" stroke-width="2"/>' + t(x, y + 4, lab, 9.5)
+        return f'<rect x="{x - 26}" y="{y - 14}" width="52" height="28" rx="3" fill="{fill}" stroke="{INK}" stroke-width="2"/>' + t(x, y + 4, lab, 11)
 
     def arrow(x1, y1, x2, y2, lab=""):
         o = f'<path d="M{x1} {y1} L{x2} {y2}" stroke="{INK}" stroke-width="1.5" fill="none" marker-end="url(#a7)"/>'
         if lab:
             o += t((x1 + x2) / 2, (y1 + y2) / 2 - 6, lab, 8.5, "middle", RED)
         return o
-    s += t(20, 24, "national: fill from wherever still has it", 10, "start", INK, SANS, "600")
+    s += t(20, 24, "national: fill from wherever still has it", 12, "start", INK, SANS, "600")
     s += node(50, 60, "DC far") + arrow(76, 60, 120, 60, "truck") + node(150, 60, "hub") + arrow(176, 60, 220, 60, "sort") + node(250, 60, "hub") + arrow(276, 60, 320, 60, "sort") + node(350, 60, "station") + arrow(376, 60, 420, 60, "van") + node(450, 60, "door", AMBER)
-    s += t(470, 90, "5 touches · 4 legs", 10, "end", RED, MONO, "bold")
-    s += t(20, 134, "regional: the region serves itself first", 10, "start", INK, SANS, "600")
+    s += t(470, 90, "5 touches · 4 legs", 12, "end", RED, MONO, "bold")
+    s += t(20, 134, "regional: the region serves itself first", 12, "start", INK, SANS, "600")
     s += node(250, 170, "DC near") + arrow(276, 170, 320, 170, "full truck") + node(350, 170, "station") + arrow(376, 170, 420, 170, "van") + node(450, 170, "door", AMBER)
-    s += t(470, 200, "3 touches · 2 legs", 10, "end", INK, MONO, "bold")
+    s += t(470, 200, "3 touches · 2 legs", 12, "end", INK, MONO, "bold")
     return fig(s, "Every hub is a sort, a dwell, a trailer and a chance to roll the freight. Touches and miles fall together because they are the same thing.",
                "Two routes for the same order: a national path through two hubs with five touches, and a regional path from a nearby DC with three.", "0 0 480 210")
 
@@ -202,13 +203,13 @@ def fig_touches() -> str:
 def fig_legible() -> str:
     s = ""
     s += f'<rect x="20" y="20" width="200" height="86" rx="6" fill="#fff" stroke="{INK}" stroke-width="2"/>'
-    s += t(30, 42, "MOVE TO", 9, "start") + t(30, 66, "A01-10108", 16, "start", INK, MONO, "bold") + t(30, 90, "the controller's address", 9, "start", RED)
+    s += t(30, 42, "MOVE TO", 11, "start") + t(30, 66, "A01-10108", 16, "start", INK, MONO, "bold") + t(30, 90, "the controller's address", 11, "start", RED)
     s += f'<rect x="260" y="20" width="200" height="86" rx="6" fill="#fff" stroke="{INK}" stroke-width="2"/>'
-    s += t(270, 42, "MOVE TO", 9, "start") + t(270, 66, "Door 8, Chute 1", 16, "start", INK, MONO, "bold") + t(270, 90, "what is painted on the floor", 9, "start", INK)
-    s += t(20, 140, "share of messages followed", 10, "start", INK, SANS, "600")
+    s += t(270, 42, "MOVE TO", 11, "start") + t(270, 66, "Door 8, Chute 1", 16, "start", INK, MONO, "bold") + t(270, 90, "what is painted on the floor", 11, "start", INK)
+    s += t(20, 140, "share of messages followed", 12, "start", INK, SANS, "600")
     s += f'<rect x="20" y="150" width="200" height="18" fill="none" stroke="{INK}" stroke-width="1.5"/><rect x="20" y="150" width="60" height="18" fill="{PALE}"/>'
     s += f'<rect x="260" y="150" width="200" height="18" fill="none" stroke="{INK}" stroke-width="1.5"/><rect x="260" y="150" width="116" height="18" fill="{AMBER}"/>'
-    s += t(120, 186, "before", 10) + t(360, 186, "after the rename", 10)
+    s += t(120, 186, "before", 12) + t(360, 186, "after the rename", 12)
     return fig(s, "Same rule, same move, same floor. The only thing that changed was the name on the gun.",
                "Two RF-gun messages side by side: one naming a controller address, one naming the door and chute painted on the floor; below, adherence bars where the second is nearly twice the first.", "0 0 480 196")
 
@@ -216,23 +217,23 @@ def fig_legible() -> str:
 def fig_ab() -> str:
     s = ""
     rnd = random.Random(7)
-    s += t(20, 20, "one building · one week · the coin flips every hour", 10, "start", INK, SANS, "600")
+    s += t(20, 20, "one building · one week · the coin flips every hour", 12, "start", INK, SANS, "600")
     for d in range(7):
         for h in range(24):
             on = rnd.random() < 0.5
             s += f'<rect x="{20 + h * 18}" y="{30 + d * 16}" width="16" height="14" fill="{AMBER if on else "#fff"}" stroke="{INK}" stroke-width=".8"/>'
-    s += t(20, 160, "■ rule on", 9.5, "start", INK) + t(100, 160, "□ rule off", 9.5, "start", INK)
-    s += t(20, 190, "rolled freight, per thousand pieces", 10, "start", INK, SANS, "600")
-    s += f'<rect x="20" y="200" width="220" height="16" fill="#fff" stroke="{INK}" stroke-width="1.5"/>' + t(248, 213, "off", 10, "start")
-    s += f'<rect x="20" y="222" width="160" height="16" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>' + t(248, 235, "on", 10, "start")
-    s += t(300, 213, "and the crew you", 9.5, "start", RED) + t(300, 226, "pulled bodies from?", 9.5, "start", RED) + t(300, 239, "measure them too", 9.5, "start", RED)
+    s += t(20, 160, "■ rule on", 11, "start", INK) + t(100, 160, "□ rule off", 11, "start", INK)
+    s += t(20, 190, "rolled freight, per thousand pieces", 12, "start", INK, SANS, "600")
+    s += f'<rect x="20" y="200" width="220" height="16" fill="#fff" stroke="{INK}" stroke-width="1.5"/>' + t(248, 213, "off", 12, "start")
+    s += f'<rect x="20" y="222" width="160" height="16" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>' + t(248, 235, "on", 12, "start")
+    s += t(300, 213, "and the crew you", 11, "start", RED) + t(300, 226, "pulled bodies from?", 11, "start", RED) + t(300, 239, "measure them too", 11, "start", RED)
     return fig(s, "Flip it by the hour so weather, volume and the manager fall out. Then read the metric you care about and the ones next to it.",
                "A 7 by 24 grid of hours randomly colored on or off, and two outcome bars comparing on hours to off hours, with a note to measure the neighboring crew.", "0 0 460 250")
 
 
 def fig_stand() -> str:
     s = ""
-    s += t(20, 24, "the model believes", 10, "start", INK, SANS, "600") + t(240, 24, "building A", 10, "middle", INK, SANS, "600") + t(360, 24, "building B", 10, "middle", INK, SANS, "600")
+    s += t(20, 24, "the model believes", 12, "start", INK, SANS, "600") + t(240, 24, "building A", 12, "middle", INK, SANS, "600") + t(360, 24, "building B", 12, "middle", INK, SANS, "600")
     rows = [("every piece is scanned off the lane", "✓", "✗  scans off, rate 4× higher"),
             ("the stager stages to the staging strip", "✓", "✗  they load straight to the trailer"),
             ("one container type per lane", "✓", "✗  shuttles with holes cut in them"),
@@ -240,10 +241,10 @@ def fig_stand() -> str:
     for i, (claim, a, b) in enumerate(rows):
         y = 52 + i * 34
         s += f'<line x1="20" y1="{y + 12}" x2="460" y2="{y + 12}" stroke="{PALE}" stroke-width="1"/>'
-        s += t(20, y + 4, claim, 9.5, "start", INK, SANS)
+        s += t(20, y + 4, claim, 11, "start", INK, SANS)
         s += t(240, y + 4, a, 12, "middle", INK, MONO, "bold")
-        s += t(300, y + 4, b, 9, "start", RED, SANS)
-    s += t(20, 200, "same blueprint, same conveyor, opposite process. none of it is in a query.", 9.5, "start", INK, SANS, "600")
+        s += t(300, y + 4, b, 11, "start", RED, SANS)
+    s += t(20, 200, "same blueprint, same conveyor, opposite process. none of it is in a query.", 11, "start", INK, SANS, "600")
     return fig(s, "A model is a list of claims about a floor. Two identical buildings will disagree with it in different places.",
                "A table of four claims the model makes about a floor; building A matches all four, building B contradicts all four for locally sensible reasons.", "0 0 480 210")
 
@@ -636,6 +637,8 @@ h1{font-size:clamp(34px,6vw,60px);line-height:1;margin:10px 0 8px;font-weight:70
 .legend{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0 0;font:500 12px "IBM Plex Mono",monospace;color:var(--line)}
 .legend span::before{content:"";display:inline-block;width:14px;height:14px;border:1.5px solid var(--line);vertical-align:-2px;margin-right:6px}
 .legend .lit::before{background:var(--amber);border-color:var(--amber)}
+.swipe{display:none;font:500 12px "IBM Plex Mono",monospace;color:var(--amber);letter-spacing:.08em;margin:0 0 6px}
+@media (max-width:760px){.swipe{display:block}}
 .group{margin-top:26px}
 .group .mono{display:block;margin-bottom:10px}
 .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
@@ -644,7 +647,7 @@ h1{font-size:clamp(34px,6vw,60px);line-height:1;margin:10px 0 8px;font-weight:70
 .card .n{font:500 12px "IBM Plex Mono",monospace;color:var(--amber);letter-spacing:.08em}
 .card .t{font-weight:600;font-size:17px;margin:4px 0 2px;line-height:1.25}
 .card .l{color:#b7cbee;font-size:14px;line-height:1.4}
-.back{color:var(--amber);text-decoration:none;font:500 13px "IBM Plex Mono",monospace;letter-spacing:.06em}
+.back{display:inline-block;padding:10px 0;color:var(--amber);text-decoration:none;font:500 13px "IBM Plex Mono",monospace;letter-spacing:.06em}
 .sheet{background:var(--paper);color:var(--paper-ink);border-radius:6px;padding:22px 20px 26px;margin-top:18px}
 .sheet .mono{color:var(--paper-mute)}
 .sheet h2{font-size:clamp(26px,4.4vw,40px);line-height:1.1;margin:8px 0 8px;letter-spacing:-.01em;text-wrap:balance}
@@ -663,7 +666,7 @@ h1{font-size:clamp(34px,6vw,60px);line-height:1;margin:10px 0 8px;font-weight:70
 .monday li{margin:.5em 0}
 .trap{border-top:1px dashed var(--paper-line);padding-top:.8em}
 .next{margin-top:28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.next a{color:var(--amber);text-decoration:none;font-size:15px}
+.next a{display:inline-block;padding:10px 0;color:var(--amber);text-decoration:none;font-size:15px;line-height:1.3}
 footer{margin-top:40px;color:var(--line);font-size:13px;border-top:1px solid var(--dim);padding-top:1em}
 .widget{margin:18px 0;border:1px solid var(--paper-line);border-radius:4px;padding:14px 16px;background:#f4f8ff}
 .wg-head{margin-bottom:.8em}
@@ -725,17 +728,17 @@ def plan_svg() -> str:
          '<g stroke="#1e4a8f" stroke-width=".6"><path d="M0 60H960M0 120H960M0 180H960M0 240H960M0 300H960M0 360H960"/><path d="M80 0V420M160 0V420M240 0V420M320 0V420M400 0V420M480 0V420M560 0V420M640 0V420M720 0V420M800 0V420M880 0V420"/></g>',
          '<rect x="60" y="40" width="840" height="90" rx="45" fill="none" stroke="#8fb3e8" stroke-width="2"/>',
          t(480, 70, "SORTER LOOP", 12, "middle", "#8fb3e8"),
-         '<path d="M400 100 L460 100" stroke="#8fb3e8" stroke-width="1.5" marker-end="url(#arP)"/>', t(430, 118, "flow", 10, "middle", "#8fb3e8"),
-         t(120, 118, "induct", 10, "start", "#8fb3e8"), t(820, 118, "recirc → problem solve", 10, "end", "#ffb627"),
+         '<path d="M400 100 L460 100" stroke="#8fb3e8" stroke-width="1.5" marker-end="url(#arP)"/>', t(430, 118, "flow", 12, "middle", "#8fb3e8"),
+         t(120, 118, "induct", 12, "start", "#8fb3e8"), t(820, 118, "recirc → problem solve", 12, "end", "#ffb627"),
          '<g fill="none" stroke="#8fb3e8" stroke-width="1.5">']
     for i in range(n):
         x = x0 + i * step
         s.append(f'<path d="M{x} 130 L{x} 200 L{x-10} 236 M{x} 130 L{x} 200 L{x+10} 236"/><rect x="{x-14}" y="196" width="28" height="40" fill="{"#ffb627" if i == 1 else "none"}" stroke="#8fb3e8"/>')
     s.append('</g>')
     s.append('<rect x="60" y="238" width="840" height="60" fill="url(#hatch)" stroke="#8fb3e8" stroke-width="1" stroke-dasharray="4 4"/>')
-    s.append(t(70, 256, "STAGING", 10, "start", "#c7d8f5"))
+    s.append(t(70, 256, "STAGING", 12, "start", "#c7d8f5"))
     s.append('<line x1="40" y1="330" x2="920" y2="330" stroke="#e9f1ff" stroke-width="3"/>')
-    s.append(t(920, 310, "DOCK WALL", 10, "end", "#c7d8f5"))
+    s.append(t(920, 310, "DOCK WALL", 12, "end", "#c7d8f5"))
     for i, d in enumerate(DOORS):
         x = x0 + i * step
         s.append(f'<a class="door-g" href="doors/{d["slug"]}/" aria-label="Door {i+1}: {esc(d["title"])}">'
@@ -751,7 +754,7 @@ def render_index() -> str:
         groups.setdefault(d["group"], []).append((i, d))
     parts = [f'<p class="mono">{esc(TITLE)} · sheet 1 · outbound</p>', "<h1>Pick a door.</h1>",
              f'<p class="lede">{esc(TAGLINE)}</p>', f'<p class="aud">{esc(AUDIENCE)}</p>',
-             f'<figure class="plan">{plan_svg()}<div class="legend"><span>chute / lane</span><span class="lit">door, lit = open it</span><span>trailer at door</span></div></figure>']
+             f'<figure class="plan"><div class="swipe">swipe the plan → · tap a door</div>{plan_svg()}<div class="legend"><span>chute / lane</span><span class="lit">door, lit = open it</span><span>trailer at door</span></div></figure>']
     for g in ("On the floor", "Between buildings", "How to work"):
         parts.append(f'<div class="group"><span class="mono">{esc(g)}</span><div class="list">')
         for i, d in groups[g]:
