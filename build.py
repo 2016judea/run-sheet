@@ -14,7 +14,7 @@ from pathlib import Path
 
 SITE = Path(__file__).resolve().parent / "site"
 TITLE = "Dock Doors"
-TAGLINE = "Nine ways to run a dock, a warehouse or a fleet better. Learned the hard way at the biggest one. Written for everyone else."
+TAGLINE = "Ten ways to run a dock, a warehouse or a fleet better. Learned the hard way at the biggest one. Written for everyone else."
 
 # ----------------------------------------------------------------------------
 # The doors
