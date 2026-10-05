@@ -58,10 +58,10 @@ def fig_signal() -> str:
     s = defs("a1")
     s += f'<rect x="20" y="30" width="110" height="54" rx="3" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<circle cx="45" cy="57" r="9" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>'
-    s += t(90, 54, "lane-full", 12) + t(90, 68, "light", 12)
+    s += t(90, 51, "lane-full", 12) + t(90, 69, "light", 12)
     s += f'<rect x="20" y="116" width="110" height="54" rx="3" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="36" y="130" width="18" height="26" rx="3" fill="none" stroke="{INK}" stroke-width="2"/>'
-    s += t(90, 140, "RF gun", 12) + t(90, 154, "scans", 12)
+    s += t(90, 137, "RF gun", 12) + t(90, 155, "scans", 12)
     s += f'<path d="M130 57 L190 95" stroke="{INK}" stroke-width="2" fill="none" marker-end="url(#a1)"/>'
     s += f'<path d="M130 143 L190 105" stroke="{INK}" stroke-width="2" fill="none" marker-end="url(#a1)"/>'
     s += f'<rect x="192" y="80" width="70" height="40" rx="20" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>'
@@ -83,7 +83,7 @@ def fig_deadend_pair() -> str:
     a += f'<path d="M160 60V98" stroke="{INK}" stroke-width="2" marker-end="url(#a2)"/>'
     a += f'<rect x="138" y="100" width="44" height="54" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>' + t(160, 132, "FULL", 12, "middle", INK, MONO, "bold")
     a += f'<path d="M182 128 Q238 128 238 60" stroke="{RED}" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#a2)"/>'
-    a += t(246, 100, "recirc, then", 11, "start", RED) + t(246, 112, "problem solve", 11, "start", RED)
+    a += t(336, 98, "recirc, then", 11, "end", RED) + t(336, 114, "problem solve", 11, "end", RED)
     a += t(160, 176, "one destination → one chute", 11, "middle", INK, SANS, "600")
     b = f'<rect x="20" y="16" width="280" height="44" rx="22" fill="none" stroke="{INK}" stroke-width="2"/>' + t(160, 43, "SORTER")
     b += f'<path d="M50 60V96M95 60V96M140 60V96M185 60V96M230 60V96M275 60V96" stroke="{INK}" stroke-width="2" fill="none"/>'
@@ -92,8 +92,8 @@ def fig_deadend_pair() -> str:
     b += t(140, 126, "FULL", 8.5, "middle", INK, MONO, "bold")
     b += t(160, 176, "one destination → six chutes", 11, "middle", INK, SANS, "600")
     return ('<div class="two">'
-            + fig(a, "A dead end. Only a body clears it.", "One destination mapped to one chute; when it blocks the freight recirculates and drops to problem solve.", "0 0 320 185")
-            + fig(b, "A mirror. The light is on. Nothing is wrong yet.", "One destination mirrored across six chutes; one blocks, the sorter uses the other five.", "0 0 320 185")
+            + fig(a, "A dead end. Only a body clears it.", "One destination mapped to one chute; when it blocks the freight recirculates and drops to problem solve.", "0 0 340 185")
+            + fig(b, "A mirror. The light is on. Nothing is wrong yet.", "One destination mirrored across six chutes; one blocks, the sorter uses the other five.", "0 0 340 185")
             + '</div>')
 
 
@@ -154,7 +154,7 @@ def fig_ghosts() -> str:
     s += f'<line x1="204" y1="20" x2="204" y2="170" stroke="{INK}" stroke-width="2"/>'
     s += t(204, 14, "99th percentile of real work", 11, "middle", INK, MONO, "bold")
     s += f'<line x1="440" y1="20" x2="440" y2="170" stroke="{RED}" stroke-width="2" stroke-dasharray="5 4"/>'
-    s += t(436, 40, "the round number", 11, "end", RED) + t(436, 52, "in the config", 11, "end", RED)
+    s += t(436, 38, "the round number", 11, "end", RED) + t(436, 54, "in the config", 11, "end", RED)
     s += t(330, 100, "ghosts the system", 12, "middle", RED, SANS, "600") + t(330, 114, "counts as work", 12, "middle", RED, SANS, "600")
     return fig(s, "Set the cutoff where real work actually ends. Everything between that and the round number is a ghost.",
                "Histogram of dwell time with a long tail; a solid line at the 99th percentile of real work, a dashed red line far to the right at an unmeasured round-number cutoff; the region between is shaded as ghosts.", "0 0 480 200")
@@ -226,7 +226,7 @@ def fig_ab() -> str:
     s += t(20, 190, "rolled freight, per thousand pieces", 12, "start", INK, SANS, "600")
     s += f'<rect x="20" y="200" width="220" height="16" fill="#fff" stroke="{INK}" stroke-width="1.5"/>' + t(248, 213, "off", 12, "start")
     s += f'<rect x="20" y="222" width="160" height="16" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>' + t(248, 235, "on", 12, "start")
-    s += t(300, 213, "and the crew you", 11, "start", RED) + t(300, 226, "pulled bodies from?", 11, "start", RED) + t(300, 239, "measure them too", 11, "start", RED)
+    s += t(300, 208, "and the crew you", 11, "start", RED) + t(300, 224, "pulled bodies from?", 11, "start", RED) + t(300, 240, "measure them too", 11, "start", RED)
     return fig(s, "Flip it by the hour so weather, volume and the manager fall out. Then read the metric you care about and the ones next to it.",
                "A 7 by 24 grid of hours randomly colored on or off, and two outcome bars comparing on hours to off hours, with a note to measure the neighboring crew.", "0 0 460 250")
 
