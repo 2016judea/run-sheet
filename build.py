@@ -105,18 +105,18 @@ def fig_three_full() -> str:
     s += f'<rect x="62" y="38" width="56" height="30" fill="#fff" stroke="{INK}" stroke-width="2" transform="rotate(-18 90 53)"/>'
     s += f'<rect x="58" y="152" width="64" height="60" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="60" y="184" width="60" height="26" fill="{PALE}"/>'
-    s += t(90, 232, "sortation full", 10, "middle", INK, SANS, "600") + t(90, 246, "beam blocked, gaylord half empty", 9)
+    s += t(90, 232, "sortation full", 13, "middle", INK, SANS, "600") + t(90, 246, "beam blocked, gaylord half empty", 11)
     s += f'<path d="M200 20 L200 110 L230 150 L270 150 L300 110 L300 20" fill="none" stroke="{INK}" stroke-width="2"/>'
     s += f'<line x1="204" y1="60" x2="296" y2="60" stroke="{PALE}" stroke-width="1.5" stroke-dasharray="3 3"/>'
     s += f'<circle cx="200" cy="60" r="5" fill="#fff" stroke="{INK}" stroke-width="1.5"/>'
     s += f'<rect x="218" y="152" width="64" height="60" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="220" y="154" width="60" height="56" fill="{PALE}"/>'
-    s += t(250, 232, "container full", 10, "middle", INK, SANS, "600") + t(250, 246, "no light, no room left", 9)
+    s += t(250, 232, "container full", 13, "middle", INK, SANS, "600") + t(250, 246, "no light, no room left", 11)
     s += f'<rect x="350" y="80" width="130" height="70" fill="#fff" stroke="{INK}" stroke-width="2"/>'
     s += f'<rect x="352" y="112" width="60" height="36" fill="{PALE}"/><rect x="414" y="126" width="30" height="22" fill="{PALE}"/>'
     s += f'<circle cx="372" cy="158" r="7" fill="none" stroke="{INK}" stroke-width="2"/><circle cx="460" cy="158" r="7" fill="none" stroke="{INK}" stroke-width="2"/>'
-    s += t(415, 102, "air", 10, "middle", RED, MONO, "bold")
-    s += t(415, 232, "trailer cube", 10, "middle", INK, SANS, "600") + t(415, 246, "closed early, shipped air", 9)
+    s += t(415, 102, "air", 13, "middle", RED, MONO, "bold")
+    s += t(415, 232, "trailer cube", 13, "middle", INK, SANS, "600") + t(415, 246, "closed early, shipped air", 11)
     return fig(s, "One photo-eye, three questions. Decide which one your action serves.",
                "Three panels: a chute whose beam is blocked by a wedged box over a half-empty gaylord; a gaylord truly full with the beam clear; a trailer leaving with empty cube.", "0 0 500 256")
 
