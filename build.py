@@ -14,7 +14,7 @@ from pathlib import Path
 
 SITE = Path(__file__).resolve().parent / "site"
 TITLE = "Dock Doors"
-TAGLINE = "Ten ways to run a dock, a warehouse or a fleet better. Learned the hard way at the biggest one. Written for everyone else."
+TAGLINE = "Ten ideas for running a dock, a warehouse or a fleet. Each one: the line, your floor, why it is true, what to measure Monday, the rule. No tool, no data, no pitch."
 
 # ----------------------------------------------------------------------------
 # The doors
@@ -500,7 +500,7 @@ def render_index() -> str:
     for i, d in enumerate(DOORS, 1):
         groups.setdefault(d["group"], []).append((i, d))
     parts = [f'<p class="mono">{esc(TITLE)}</p>', f"<h1>Pick a door.</h1>", f'<p class="lede">{esc(TAGLINE)}</p>',
-             '<p>Each door is one idea about running a dock, a warehouse or a fleet. One line you can carry, what it looks like on your floor, why it is true, what to measure on Monday with what you already own, and the rule with its reason attached. No tool. No data. No pitch.</p>']
+             ]
     for g in ("On the floor", "Between buildings", "How to work"):
         parts.append(f'<div class="group"><span class="mono">{esc(g)}</span><ul class="doors">')
         for i, d in groups[g]:
