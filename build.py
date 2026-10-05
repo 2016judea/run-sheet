@@ -130,7 +130,7 @@ def fig_slammed() -> str:
     s += f'<path d="M40 165 L120 160 L180 158 L230 150 L260 120 L290 70 L320 50 L360 45 L400 60 L460 65" fill="none" stroke="{INK}" stroke-width="2"/>'
     s += t(292, 62, "inbound to the lane", 9.5, "end", INK, SANS)
     s += f'<path d="M40 170 L230 168 L260 150 L290 110 L320 75 L340 40" fill="none" stroke="{AMBER}" stroke-width="3"/>'
-    s += t(345, 44, "freight sitting on it", 9.5, "start", INK, SANS)
+    s += t(352, 88, "freight sitting on it", 9.5, "start", INK, SANS)
     s += f'<line x1="300" y1="20" x2="300" y2="180" stroke="{RED}" stroke-width="1.5" stroke-dasharray="4 3"/>'
     s += f'<circle cx="300" cy="94" r="6" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>'
     s += t(300, 14, "light trips", 9.5, "middle", RED)
