@@ -725,7 +725,7 @@ def plan_svg() -> str:
          '<g stroke="#1e4a8f" stroke-width=".6"><path d="M0 60H960M0 120H960M0 180H960M0 240H960M0 300H960M0 360H960"/><path d="M80 0V420M160 0V420M240 0V420M320 0V420M400 0V420M480 0V420M560 0V420M640 0V420M720 0V420M800 0V420M880 0V420"/></g>',
          '<rect x="60" y="40" width="840" height="90" rx="45" fill="none" stroke="#8fb3e8" stroke-width="2"/>',
          t(480, 70, "SORTER LOOP", 12, "middle", "#8fb3e8"),
-         '<path d="M700 100 L760 100" stroke="#8fb3e8" stroke-width="1.5" marker-end="url(#arP)"/>', t(730, 118, "flow", 10, "middle", "#8fb3e8"),
+         '<path d="M400 100 L460 100" stroke="#8fb3e8" stroke-width="1.5" marker-end="url(#arP)"/>', t(430, 118, "flow", 10, "middle", "#8fb3e8"),
          t(120, 118, "induct", 10, "start", "#8fb3e8"), t(820, 118, "recirc → problem solve", 10, "end", "#ffb627"),
          '<g fill="none" stroke="#8fb3e8" stroke-width="1.5">']
     for i in range(n):
@@ -735,7 +735,7 @@ def plan_svg() -> str:
     s.append('<rect x="60" y="238" width="840" height="60" fill="url(#hatch)" stroke="#8fb3e8" stroke-width="1" stroke-dasharray="4 4"/>')
     s.append(t(70, 256, "STAGING", 10, "start", "#c7d8f5"))
     s.append('<line x1="40" y1="330" x2="920" y2="330" stroke="#e9f1ff" stroke-width="3"/>')
-    s.append(t(40, 320, "DOCK WALL", 10, "start", "#c7d8f5"))
+    s.append(t(920, 310, "DOCK WALL", 10, "end", "#c7d8f5"))
     for i, d in enumerate(DOORS):
         x = x0 + i * step
         s.append(f'<a class="door-g" href="doors/{d["slug"]}/" aria-label="Door {i+1}: {esc(d["title"])}">'
