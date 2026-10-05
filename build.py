@@ -67,14 +67,14 @@ def fig_signal() -> str:
     s += f'<rect x="192" y="80" width="70" height="40" rx="20" fill="{AMBER}" stroke="{INK}" stroke-width="2"/>'
     s += t(227, 104, "JOIN", 11, "middle", INK, MONO, "bold")
     s += f'<path d="M262 100 L312 100" stroke="{INK}" stroke-width="2" marker-end="url(#a1)"/>'
-    s += f'<rect x="314" y="72" width="86" height="56" rx="3" fill="#fff" stroke="{INK}" stroke-width="2"/>'
-    s += t(357, 95, "“door 7 is", 12) + t(357, 110, "backed up, go”", 12)
+    s += f'<rect x="312" y="72" width="100" height="56" rx="3" fill="#fff" stroke="{INK}" stroke-width="2"/>'
+    s += t(362, 95, "“door 7 is", 12) + t(362, 112, "backed up”", 12)
     s += f'<path d="M30 200 H400" stroke="{PALE}" stroke-width="1" stroke-dasharray="3 3"/>'
-    s += f'<path d="M60 230 C 120 200, 300 200, 360 230 C 300 260, 120 260, 60 230 Z" fill="none" stroke="{RED}" stroke-width="2" stroke-dasharray="6 4"/>'
-    s += f'<circle cx="60" cy="230" r="6" fill="{RED}"/>'
-    s += t(210, 234, "the lead walking the wall all shift = a person polling the same two signals", 11, "middle", RED, SANS)
+    s += f'<path d="M60 226 C 120 204, 300 204, 360 226 C 300 248, 120 248, 60 226 Z" fill="none" stroke="{RED}" stroke-width="2" stroke-dasharray="6 4"/>'
+    s += f'<circle cx="60" cy="226" r="6" fill="{RED}"/>'
+    s += t(210, 268, "the lead walking the wall all shift: a person polling the same two signals", 11, "middle", RED, SANS)
     return fig(s, "Two signals the building already gives off, joined once, replace a ten-hour walk.",
-               "A lane-full light and RF scans joined into one message to the nearest free person; below, the loop the shift lead walks to do the same job by hand.", "0 0 420 270")
+               "A lane-full light and RF scans joined into one message to the nearest free person; below, the loop the shift lead walks to do the same job by hand.", "0 0 420 280")
 
 
 def fig_deadend_pair() -> str:
@@ -167,7 +167,7 @@ def fig_size_it() -> str:
     rows = [("trailer reposition", 180, True), ("return an empty", 120, True), ("bobtail", -36, False), ("pool swap", -70, False)]
     for i, (lab, w, pos) in enumerate(rows):
         y = 34 + i * 42
-        s += t(ax - 8, y + 16, lab, 12, "end")
+        s += t(12, y + 16, lab, 12, "start")
         if pos:
             s += f'<rect x="{ax}" y="{y}" width="{w}" height="24" fill="{AMBER}" stroke="{INK}" stroke-width="1.5"/>'
             s += t(ax + 8, y + 16, "costs more", 11, "start", INK, SANS, "600")
