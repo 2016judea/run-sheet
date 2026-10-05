@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>A queue only needs help when it has no way out. · Dock Doors</title>
+<meta name="description" content="Sending people to a full lane pays where the work has nowhere else to go. Where the work can route around, it measures as nothing.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../">← all doors</a>
+<p class="mono">Door 2 · On the floor</p>
+<h1>A queue only needs help when it has no way out.</h1>
+<div class="oneline">Sending people to a full lane pays where the work has nowhere else to go. Where the work can route around, it measures as nothing.</div>
+<h2>What it looks like on your floor</h2>
+<p>Two lanes, both full, both lit. On the first, every package for that destination has to come down this one lane. When it blocks, the sorter has nowhere to send that work. It circles, then it goes to the problem pile, and most of it misses its truck. On the second lane, the same destination is spread across six lanes. When one blocks, the sorter uses the other five. The light is on. Nothing is actually wrong.</p>
+<h2>Why it is true</h2>
+<p>A full buffer only hurts when it is the only buffer. If a destination maps to one lane, that lane is a dead end and a person is the only way out. If the destination is mirrored across many lanes, congestion routes around itself and your intervention is solving a problem the machine already solved. The same algorithm, the same signal and the same experiment can be decisive on one sorter and inert on the next. The difference is not the people or the software. It is how many ways out the queue has.</p>
+
+<section class="widget" aria-label="Exclusive lane versus mirrored lane">
+  <div class="wg-head"><span class="mono">try it</span> One destination, one lane or six. Block a lane.</div>
+  <div class="wg-row">
+    <button class="wg-tab on" data-mode="one">one lane</button>
+    <button class="wg-tab" data-mode="six">six lanes</button>
+  </div>
+  <div id="lanes" class="lanes"></div>
+  <p id="lanes-out" class="wg-out"></p>
+</section>
+<script>
+(function(){
+  var mode='one', blocked={};
+  var box=document.getElementById('lanes'), out=document.getElementById('lanes-out');
+  function draw(){
+    var n = mode==='one'?1:6; box.innerHTML='';
+    for(var i=0;i<n;i++){
+      var b=document.createElement('button'); b.className='lane'+(blocked[i]?' blocked':'');
+      b.setAttribute('aria-pressed', blocked[i]?'true':'false');
+      b.innerHTML='<span class="light"></span><span class="mono">lane '+(i+1)+'</span>';
+      b.onclick=(function(i){return function(){blocked[i]=!blocked[i]; draw();};})(i);
+      box.appendChild(b);
+    }
+    var nb=0; for(var k in blocked) if(blocked[k] && +k<n) nb++;
+    if(n===1){ out.textContent = nb? 'Dead end. Every package for this destination now circles, then goes to the problem pile. One person here is the only way out.' : 'Open. All work for this destination comes down this one lane.'; }
+    else { out.textContent = nb===0? 'Open. Work spreads across six lanes.' : nb<n? nb+' of 6 blocked. Lights are on. The machine routes around them and nothing is lost yet. A person sent here is solving a solved problem.' : 'All six blocked at once. Now it fails, later and harder, because the machine kept everything moving to the edge. Watch the set, not the lane.'; }
+  }
+  document.querySelectorAll('.wg-tab').forEach(function(t){ t.onclick=function(){ mode=t.dataset.mode; blocked={}; document.querySelectorAll('.wg-tab').forEach(function(x){x.classList.toggle('on',x===t);}); draw(); }; });
+  draw();
+})();
+</script>
+<h2>Monday</h2>
+<ol class="monday"><li>For every lane, count how many other lanes can take its work. One means a dead end. Five means a mirror.</li><li>Rank your dead ends by volume. That is the list where staffing moves pay.</li><li>Stop sending people to mirrored lanes on a light alone. Send them when the whole mirror set is full.</li></ol>
+<h2>The rule, and why</h2>
+<div class="rule"><b>Spend labor on dead ends. Let mirrors absorb themselves.</b><p class="why">The cost of a move is a person walking across the building and leaving the work they had. Pay it only where it buys something.</p></div>
+<h2>The trap</h2>
+<div class="trap"><p>Mirrored lanes still fail, but they fail together and later. When the whole set fills, the recirculation is worse because the machine kept everything moving right up to the edge. Watch the set, not the lane.</p></div>
+<div class="next"><a href="../the-signal-is-already-there/">← The signal is already there.</a><a href="../full-is-three-different-things/">Full is three different things. →</a></div>
+<footer>Dock Doors · a paradigms framework for fulfillment and transportation, not a tool and not a product · free to use, cite the door</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Reaction is late by construction. · Dock Doors</title>
+<meta name="description" content="Stations do not fill up. They get slammed. Staff to what is arriving, and set relative targets you can always hit.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../">← all doors</a>
+<p class="mono">Door 4 · On the floor</p>
+<h1>Reaction is late by construction.</h1>
+<div class="oneline">Stations do not fill up. They get slammed. Staff to what is arriving, and set relative targets you can always hit.</div>
+<h2>What it looks like on your floor</h2>
+<p>One person on a lane, handling a package a minute, nothing backing up. Then the arrivals triple. Half the work starts circling. By the time two more people arrive the lane is a wall and nine in ten packages are missing it. Look back at the data and the lane looked fine five minutes before. The stations that end up with the most help had the least work right before it happened. The failure is not slow accumulation you can watch coming. It is a sudden arrival rate against a station that looked healthy.</p>
+<h2>Why it is true</h2>
+<p>Any rule that fires on a full signal is already late, because full is the end state. The information that would have helped was upstream: what was labeled in the last fifteen minutes and where it is bound. So compute headcount with units on it. Work on hand divided by a measured rate, plus work arriving in the next quarter hour, plus the quarter hour after that, weighting the present most because it is the only part you are sure of. Then set a relative target, not an absolute one. Do not try to staff every zone to its number, which the building can rarely do. Make sure no lower-priority zone holds more people than a higher-priority one. A target you can always reach beats an optimum you never can.</p>
+
+<section class="widget" aria-label="Headcount with units">
+  <div class="wg-head"><span class="mono">try it</span> How many people does this zone need right now?</div>
+  <div class="wg-grid">
+    <label>Work on hand<input id="hc-wip" type="number" inputmode="numeric" value="40" min="0"></label>
+    <label>Arriving in 15 min<input id="hc-f15" type="number" inputmode="numeric" value="30" min="0"></label>
+    <label>Arriving in 15–30 min<input id="hc-f30" type="number" inputmode="numeric" value="20" min="0"></label>
+    <label>Units one person handles per hour<input id="hc-rate" type="number" inputmode="numeric" value="60" min="1"></label>
+  </div>
+  <p id="hc-out" class="wg-out"></p>
+  <p class="wg-note">Present work counts double, the near future counts more than the far. Weights are the shape of the idea, not a setting to copy; measure your own rate.</p>
+</section>
+<script>
+(function(){
+  var ids=['hc-wip','hc-f15','hc-f30','hc-rate'], out=document.getElementById('hc-out');
+  function v(id){ return Math.max(0, parseFloat(document.getElementById(id).value)||0); }
+  function calc(){
+    var r=Math.max(1,v('hc-rate')), q=r/4; // units per person per quarter hour
+    var hc = v('hc-wip')/(q*0.5) + v('hc-f15')/(q*0.75) + v('hc-f30')/(q*1.0);
+    out.textContent = 'About '+Math.ceil(hc)+' people on this zone for the next half hour. Compare that to how many are standing there, then rank zones and move from the bottom.';
+  }
+  ids.forEach(function(id){ document.getElementById(id).addEventListener('input',calc); });
+  calc();
+})();
+</script>
+<h2>Monday</h2>
+<ol class="monday"><li>Measure your real rate per role off the floor. Do not assume it. It varies by site and shift.</li><li>Pull arrivals by lane for the next 15 and 30 minutes from your label or induct data. If you have no forecast, what has been labeled and not yet sorted is one.</li><li>Rank zones by headcount needed and compare to headcount present. Move one person from the lowest-ranked zone with the most people. Repeat.</li></ol>
+<h2>The rule, and why</h2>
+<div class="rule"><b>Weight the present most, forecast the near future, and balance relatively.</b><p class="why">The present is certain, the forecast is not, and an absolute plan the floor cannot execute trains people to ignore the plan.</p></div>
+<h2>The trap</h2>
+<div class="trap"><p>Labor is one pool. Every person you move toward one role is a person you moved away from another. The far side of a move is where the next failure comes from. Measure the role you pulled from as carefully as the one you fed.</p></div>
+<div class="next"><a href="../full-is-three-different-things/">← Full is three different things.</a><a href="../measure-the-constant-before-you-build-the-model/">Measure the constant before you build the model. →</a></div>
+<footer>Dock Doors · a paradigms framework for fulfillment and transportation, not a tool and not a product · free to use, cite the door</footer>
+</div>
+</body>
+</html>

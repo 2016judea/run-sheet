@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Size it before you build it. · Dock Doors</title>
+<meta name="description" content="Find the number first. Let the size of the answer decide whether there is a project.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../">← all doors</a>
+<p class="mono">Door 7 · Between buildings</p>
+<h1>Size it before you build it.</h1>
+<div class="oneline">Find the number first. Let the size of the answer decide whether there is a project.</div>
+<h2>What it looks like on your floor</h2>
+<p>Someone wants to build a system to cut empty miles. Before anyone draws a box, pull every truck tour for six weeks. Split the miles into loaded and empty. Put a price on an empty mile. Then split the empty miles by why they happened: repositioning a trailer, returning an empty, a driver running bobtail, a pool adjustment. For each kind, compare the cost of tours that had it against tours that did not. Some kinds cost more. Some kinds, it turns out, come with cheaper tours. Now you know where the money is, how much there is, and whether a human or a planning system put it there.</p>
+<h2>Why it is true</h2>
+<p>Sizing before designing sounds obvious and almost nobody does it, because the design is the fun part and the sizing might say no. But the sizing is also where the real finding hides. In a one-way network, where freight flows in and out but rarely back, empty miles are the base case, not a mistake. Trade associations put industry deadhead around one mile in six. When the empty legs are planned by several systems that each optimize their own piece and never see each other, the long ones are not an operator problem. They are a seam between planners. Half of doing this well is being willing to come back and say the number is small.</p>
+
+<section class="widget" aria-label="Price of an empty mile">
+  <div class="wg-head"><span class="mono">try it</span> What does your deadhead cost?</div>
+  <div class="wg-grid">
+    <label>Loaded miles (six weeks)<input id="dh-loaded" type="number" inputmode="numeric" value="900000" min="1"></label>
+    <label>Empty miles (six weeks)<input id="dh-empty" type="number" inputmode="numeric" value="90000" min="0"></label>
+    <label>Invoiced cost ($)<input id="dh-cost" type="number" inputmode="numeric" value="2400000" min="0"></label>
+  </div>
+  <p id="dh-out" class="wg-out"></p>
+  <p class="wg-note">Industry deadhead runs around one mile in six. If yours is already well under that, the remaining empty miles are probably a seam between planners, not a driver problem.</p>
+</section>
+<script>
+(function(){
+  var out=document.getElementById('dh-out');
+  function v(id){ return Math.max(0, parseFloat(document.getElementById(id).value)||0); }
+  function fmt(n){ return '$'+Math.round(n).toLocaleString(); }
+  function calc(){
+    var L=Math.max(1,v('dh-loaded')), E=v('dh-empty'), C=v('dh-cost'), T=L+E;
+    var perMile=C/T, emptyCost=perMile*E, pct=100*E/T, perYear=emptyCost*52/6;
+    out.textContent = 'Empty miles are '+pct.toFixed(1)+'% of your miles. At '+fmt(perMile).replace('$','$')+' a mile all-in, they cost '+fmt(emptyCost)+' over six weeks, about '+fmt(perYear)+' a year. Now split that by cause and by planner before you decide anything.';
+  }
+  ['dh-loaded','dh-empty','dh-cost'].forEach(function(id){ document.getElementById(id).addEventListener('input',calc); });
+  calc();
+})();
+</script>
+<h2>Monday</h2>
+<ol class="monday"><li>For six weeks of tours, compute loaded miles, empty miles and invoiced cost. Divide. That is your price per empty mile.</li><li>Bucket empty miles by cause and by which planner or person created them. Compare tour cost with and without each cause.</li><li>Pull the long tail back to your own average, not to zero. Price that. If it is small, say so and stop.</li></ol>
+<h2>The rule, and why</h2>
+<div class="rule"><b>No design doc before a sizing doc. The sizing doc may kill the project, and that is the point.</b><p class="why">A project that cannot survive its own arithmetic should die on paper, where it costs a week, not in production, where it costs a year.</p></div>
+<h2>The trap</h2>
+<div class="trap"><p>The finding will usually indict the planning systems, not the people running them. Tell the organization that plainly. It is neither an accusation nor an excuse, and the moment it lands as either, nobody will fix the seam.</p></div>
+<div class="next"><a href="../legibility-beats-intelligence/">← Legibility beats intelligence.</a><a href="../fewer-touches-not-faster-touches/">Fewer touches, not faster touches. →</a></div>
+<footer>Dock Doors · a paradigms framework for fulfillment and transportation, not a tool and not a product · free to use, cite the door</footer>
+</div>
+</body>
+</html>

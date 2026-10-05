@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Measure the constant before you build the model. · Dock Doors</title>
+<meta name="description" content="Somewhere in your system a round number nobody measured is deciding what is real.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../">← all doors</a>
+<p class="mono">Door 5 · On the floor</p>
+<h1>Measure the constant before you build the model.</h1>
+<div class="oneline">Somewhere in your system a round number nobody measured is deciding what is real.</div>
+<h2>What it looks like on your floor</h2>
+<p>A worker moves a package off a lane without scanning it. The package leaves the building. In the database it stays on the lane. Do that a few hundred times a day and your system believes a lane is full of work when it is empty, and it will confidently send someone there. The defense was a cutoff: anything sitting too long is assumed gone. The cutoff was a round number in a config file. Nobody had measured it. It was just round.</p>
+<h2>Why it is true</h2>
+<p>Ghosts are not a volume problem or an equipment problem. Two buildings with the same layout and the same equipment differ by how often their people scan, and a tiny difference in scan discipline turns into a large error in what the system thinks is there. Every model you build on top inherits the error. The fix is not a better model. Go measure the actual distribution of how long real work sits, find the tail, and set the cutoff there. You will give up a small slice of real work to evict every ghost, and that trade is obviously right once you can see both sides.</p>
+
+<h2>Monday</h2>
+<ol class="monday"><li>Measure scan compliance per lane: packages that left with a scan over packages that left at all.</li><li>Measure how long real work actually sits before it is handled, and find the 99th percentile. That is your cutoff, not a round number.</li><li>Open every config file your decisions depend on and list the constants. Ask of each one: who measured this, and when?</li></ol>
+<h2>The rule, and why</h2>
+<div class="rule"><b>No constant ships unmeasured. Every threshold carries the date and the data that set it.</b><p class="why">A round number looks like a decision. It is usually a guess that survived because nothing downstream could audit it.</p></div>
+<h2>The trap</h2>
+<div class="trap"><p>Compliance is a habit, not a property of the building, so it drifts. A cutoff measured once is a cutoff that will be wrong again. Re-measure on a schedule, or make the cutoff compute itself from the current distribution.</p></div>
+<div class="next"><a href="../reaction-is-late-by-construction/">← Reaction is late by construction.</a><a href="../legibility-beats-intelligence/">Legibility beats intelligence. →</a></div>
+<footer>Dock Doors · a paradigms framework for fulfillment and transportation, not a tool and not a product · free to use, cite the door</footer>
+</div>
+</body>
+</html>
