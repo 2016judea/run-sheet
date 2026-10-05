@@ -4,52 +4,52 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Size it before you build it. · Dock Doors</title>
-<meta name="description" content="Find the number first. Let the size of the answer decide whether there is a project.">
+<meta name="description" content="Put a price on an empty mile first. Let the size of the answer decide whether there is a project.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 <div class="wrap">
-<a class="back" href="../../">← all doors</a>
-<p class="mono">Door 7 · Between buildings</p>
-<h1>Size it before you build it.</h1>
-<div class="oneline">Find the number first. Let the size of the answer decide whether there is a project.</div>
-<h2>What it looks like on your floor</h2>
-<p>Someone wants to build a system to cut empty miles. Before anyone draws a box, pull every truck tour for six weeks. Split the miles into loaded and empty. Put a price on an empty mile. Then split the empty miles by why they happened: repositioning a trailer, returning an empty, a driver running bobtail, a pool adjustment. For each kind, compare the cost of tours that had it against tours that did not. Some kinds cost more. Some kinds, it turns out, come with cheaper tours. Now you know where the money is, how much there is, and whether a human or a planning system put it there.</p>
-<h2>Why it is true</h2>
-<p>Sizing before designing sounds obvious and almost nobody does it, because the design is the fun part and the sizing might say no. But the sizing is also where the real finding hides. In a one-way network, where freight flows in and out but rarely back, empty miles are the base case, not a mistake. Trade associations put industry deadhead around one mile in six. When the empty legs are planned by several systems that each optimize their own piece and never see each other, the long ones are not an operator problem. They are a seam between planners. Half of doing this well is being willing to come back and say the number is small.</p>
+<a class="back" href="../../">← back to the plan</a>
+<div class="sheet">
+<p class="mono">Door 06 · Between buildings · sheet 7</p>
+<h2>Size it before you build it.</h2>
+<div class="one">Put a price on an empty mile first. Let the size of the answer decide whether there is a project.</div>
+<figure class="fig"><svg viewBox="0 0 400 214" role="img" aria-label="Horizontal bar chart of cost delta by empty-movement cause: trailer repositioning and returning empties are positive and large; bobtail and pool swaps are negative."><path d="M150 20 V190" stroke="#0f2f63" stroke-width="1.5"/><text x="142" y="49" text-anchor="end" font-size="10" fill="#0f2f63" font-family="IBM Plex Mono, monospace" font-weight="normal">trailer reposition</text><rect x="150" y="34" width="170" height="22" fill="#ffb627" stroke="#0f2f63" stroke-width="1.5"/><text x="326" y="49" text-anchor="start" font-size="9" fill="#0f2f63" font-family="Archivo, sans-serif" font-weight="normal">tours with it cost more</text><text x="142" y="89" text-anchor="end" font-size="10" fill="#0f2f63" font-family="IBM Plex Mono, monospace" font-weight="normal">return an empty</text><rect x="150" y="74" width="110" height="22" fill="#ffb627" stroke="#0f2f63" stroke-width="1.5"/><text x="266" y="89" text-anchor="start" font-size="9" fill="#0f2f63" font-family="Archivo, sans-serif" font-weight="normal">tours with it cost more</text><text x="142" y="129" text-anchor="end" font-size="10" fill="#0f2f63" font-family="IBM Plex Mono, monospace" font-weight="normal">bobtail</text><rect x="120" y="114" width="30" height="22" fill="#fff" stroke="#0f2f63" stroke-width="1.5"/><text x="114" y="129" text-anchor="end" font-size="9" fill="#0f2f63" font-family="Archivo, sans-serif" font-weight="normal">cheaper</text><text x="142" y="169" text-anchor="end" font-size="10" fill="#0f2f63" font-family="IBM Plex Mono, monospace" font-weight="normal">pool swap</text><rect x="90" y="154" width="60" height="22" fill="#fff" stroke="#0f2f63" stroke-width="1.5"/><text x="84" y="169" text-anchor="end" font-size="9" fill="#0f2f63" font-family="Archivo, sans-serif" font-weight="normal">cheaper</text><text x="150" y="206" text-anchor="middle" font-size="9.5" fill="#0f2f63" font-family="Archivo, sans-serif" font-weight="normal">tour cost with this empty leg − tour cost without it</text></svg><figcaption>Split deadhead by cause, then compare tours with the cause against tours without. Some causes cost money. Some come with cheaper tours and are not the target.</figcaption></figure>
+<h3>On your dock</h3>
+<p>Someone wants to build a system to cut deadhead. Before anyone draws a box, pull every tour for six weeks. Split the miles into loaded and empty. Put a price on an empty mile. Then split the empty miles by why they happened: repositioning a trailer, returning an empty, a driver running bobtail, a pool swap. For each cause, compare the cost of tours that had it against tours that did not. Some causes cost money. Some, it turns out, come with cheaper tours. Now you know where the money is, how much there is, and whether a dispatcher or a planning system put it there.</p>
+<h3>Why it is true</h3>
+<p>Sizing before designing sounds obvious and almost nobody does it, because the design is the fun part and the sizing might say no. But the sizing is also where the real finding hides. In a one-way network, where freight flows out but rarely back, deadhead is the base case, not a mistake. The trade associations put industry deadhead around one mile in six. When the empty legs are planned by several systems that each solve their own piece and never see each other, the long ones are not a driver problem. They are a seam between planners. Half of doing this well is being willing to come back and say the number is small.</p>
 
 <section class="widget" aria-label="Price of an empty mile">
   <div class="wg-head"><span class="mono">try it</span> What does your deadhead cost?</div>
   <div class="wg-grid">
-    <label>Loaded miles (six weeks)<input id="dh-loaded" type="number" inputmode="numeric" value="900000" min="1"></label>
-    <label>Empty miles (six weeks)<input id="dh-empty" type="number" inputmode="numeric" value="90000" min="0"></label>
-    <label>Invoiced cost ($)<input id="dh-cost" type="number" inputmode="numeric" value="2400000" min="0"></label>
+    <label>Loaded miles, six weeks<input id="dh-loaded" type="number" inputmode="numeric" value="900000" min="1"></label>
+    <label>Empty miles, six weeks<input id="dh-empty" type="number" inputmode="numeric" value="90000" min="0"></label>
+    <label>Invoiced linehaul, $<input id="dh-cost" type="number" inputmode="numeric" value="2400000" min="0"></label>
   </div>
   <p id="dh-out" class="wg-out"></p>
-  <p class="wg-note">Industry deadhead runs around one mile in six. If yours is already well under that, the remaining empty miles are probably a seam between planners, not a driver problem.</p>
+  <p class="wg-note">Industry deadhead runs around one mile in six. If yours is already well under that, what is left is probably a seam between planners, not a driver problem.</p>
 </section>
 <script>
 (function(){
   var out=document.getElementById('dh-out');
   function v(id){ return Math.max(0, parseFloat(document.getElementById(id).value)||0); }
   function fmt(n){ return '$'+Math.round(n).toLocaleString(); }
-  function calc(){
-    var L=Math.max(1,v('dh-loaded')), E=v('dh-empty'), C=v('dh-cost'), T=L+E;
-    var perMile=C/T, emptyCost=perMile*E, pct=100*E/T, perYear=emptyCost*52/6;
-    out.textContent = 'Empty miles are '+pct.toFixed(1)+'% of your miles. At '+fmt(perMile).replace('$','$')+' a mile all-in, they cost '+fmt(emptyCost)+' over six weeks, about '+fmt(perYear)+' a year. Now split that by cause and by planner before you decide anything.';
-  }
-  ['dh-loaded','dh-empty','dh-cost'].forEach(function(id){ document.getElementById(id).addEventListener('input',calc); });
-  calc();
+  function calc(){ var L=Math.max(1,v('dh-loaded')), E=v('dh-empty'), C=v('dh-cost'), T=L+E; var perMile=C/T, emptyCost=perMile*E, pct=100*E/T, perYear=emptyCost*52/6;
+    out.textContent = 'Deadhead is '+pct.toFixed(1)+'% of your miles. At '+fmt(perMile)+' a mile all-in, it cost '+fmt(emptyCost)+' over six weeks, about '+fmt(perYear)+' a year. Now split that by cause and by planner before you decide anything.'; }
+  ['dh-loaded','dh-empty','dh-cost'].forEach(function(id){ document.getElementById(id).addEventListener('input',calc); }); calc();
 })();
 </script>
-<h2>Monday</h2>
-<ol class="monday"><li>For six weeks of tours, compute loaded miles, empty miles and invoiced cost. Divide. That is your price per empty mile.</li><li>Bucket empty miles by cause and by which planner or person created them. Compare tour cost with and without each cause.</li><li>Pull the long tail back to your own average, not to zero. Price that. If it is small, say so and stop.</li></ol>
-<h2>The rule, and why</h2>
+<h3>Monday</h3>
+<ol class="monday"><li>For six weeks of tours, compute loaded miles, empty miles and invoiced linehaul. Divide. That is your price per empty mile.</li><li>Bucket empty miles by cause and by which planner or dispatcher created them. Compare tour cost with and without each cause.</li><li>Pull the long tail back to your own average, not to zero. Price that. If it is small, say so and stop.</li></ol>
+<h3>The rule, and why</h3>
 <div class="rule"><b>No design doc before a sizing doc. The sizing doc may kill the project, and that is the point.</b><p class="why">A project that cannot survive its own arithmetic should die on paper, where it costs a week, not in production, where it costs a year.</p></div>
-<h2>The trap</h2>
-<div class="trap"><p>The finding will usually indict the planning systems, not the people running them. Tell the organization that plainly. It is neither an accusation nor an excuse, and the moment it lands as either, nobody will fix the seam.</p></div>
-<div class="next"><a href="../legibility-beats-intelligence/">← Legibility beats intelligence.</a><a href="../fewer-touches-not-faster-touches/">Fewer touches, not faster touches. →</a></div>
-<footer>Dock Doors · a paradigms framework for fulfillment and transportation, not a tool and not a product · free to use, cite the door</footer>
+<h3>The trap</h3>
+<div class="trap"><p>The finding will usually indict the planning systems, not the people running them. Say that plainly. It is neither an accusation nor an excuse, and the moment it lands as either, nobody will fix the seam.</p></div>
+</div>
+<div class="next"><a href="../measure-the-constant-before-you-build-the-model/">← D05 Measure the constant before you build the model.</a><a href="../fewer-touches-not-faster-touches/">D07 Fewer touches, not faster touches. →</a></div>
+<footer>Dock Doors · a paradigms framework for fulfillment and transportation. Not a tool, not a product, no pitch. Free to use; cite the door.</footer>
 </div>
 </body>
 </html>
