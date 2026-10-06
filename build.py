@@ -25,7 +25,7 @@ import re
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parent / "site"
-TITLE = "Dock Doors"
+TITLE = "Run Sheet"
 TAGLINE = "Ten ideas for running a dock, a DC or a fleet, drawn to scale. Each one is a lesson from the biggest parcel network on earth, rewritten for everyone who isn't it."
 AUDIENCE = "For the people who own the outbound wall: the ops manager graded on cost per case and on-time ship, the shift lead graded on trailers out by cutoff and the crew's rate, the owner-dispatcher graded on all-in rate per mile after deadhead."
 
@@ -685,6 +685,78 @@ footer{margin-top:40px;color:var(--line);font-size:13px;border-top:1px solid var
 .wg-out{font-weight:600;margin:.9em 0 .2em;max-width:66ch}
 .wg-note{color:var(--paper-mute);font-size:.9rem;margin:0;max-width:66ch}
 a:focus-visible,button:focus-visible,.door-g:focus{outline:2px solid var(--amber);outline-offset:2px}
+/* Run Sheet trainer */
+#app h2{font-size:clamp(28px,5vw,44px);line-height:1.05;margin:8px 0 12px;letter-spacing:-.01em;text-wrap:balance}
+#app h3{margin:22px 0 8px}
+.pickhead{margin:26px 0 10px;display:block;color:var(--amber)}
+.segs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.seg{position:relative;display:block;border:1.5px solid var(--dim);border-radius:6px;padding:16px 44px 16px 16px;color:inherit;text-decoration:none;background:rgba(255,255,255,.03)}
+.seg:hover,.seg:focus-visible{border-color:var(--amber)}
+.seg .t{display:block;font-weight:700;font-size:18px}
+.seg .l{display:block;color:#b7cbee;font-size:14px;margin-top:3px;line-height:1.4}
+.seg .go{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--amber);font-size:22px}
+.aside{color:#9fb8e2;font-size:14px;max-width:62ch;margin:18px 0}
+.brief{list-style:none;padding:0;margin:0 0 8px;max-width:52ch}
+.brief li{border-top:1px solid var(--dim);padding:12px 0;font-size:18px}
+.brief li b{color:var(--amber)}
+.brief .ev{color:#ffd27a}
+.big{display:block;width:100%;max-width:420px;font:700 18px "Archivo",sans-serif;padding:16px;border:0;border-radius:6px;background:var(--amber);color:#0f2f63;cursor:pointer;text-align:center;text-decoration:none;margin:18px 0 0}
+.big:disabled{background:#3a5a8f;color:#c7d8f5;cursor:not-allowed}
+.ghost{display:block;max-width:420px;text-align:center;padding:14px;margin-top:10px;border:1.5px solid var(--dim);border-radius:6px;color:var(--ink);text-decoration:none}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.trucks{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin:6px 0 8px}
+.truck{font:inherit;text-align:left;padding:9px 10px;border:1.5px solid var(--dim);border-left:6px solid var(--c);border-radius:5px;background:var(--bg2);color:var(--ink);cursor:pointer;min-height:44px}
+.truck.on{border-color:var(--c);background:rgba(255,255,255,.08)}
+.truck.late .tm:last-child{color:#ffd27a}
+.truck.over{border-color:var(--red)}
+.truck .tn{display:block;font-weight:700;font-size:15px}
+.truck .tm{display:block;font:500 11.5px "IBM Plex Mono",monospace;color:#b7cbee;margin-top:2px}
+.hint{color:#b7cbee;font-size:14px;margin:4px 0 8px}
+.key{white-space:nowrap;margin-left:6px;color:var(--line)}
+.k-t{display:inline-block;width:11px;height:11px;border:2px dashed var(--ink);border-radius:50%;vertical-align:-1px;margin-right:4px}
+.mapwrap{border:1px solid var(--dim);border-radius:6px;background:var(--bg2);padding:6px}
+.map{display:block;width:100%;height:auto;touch-action:manipulation}
+.map .grid{stroke:#1e4a8f;stroke-width:.6}
+.map .yard{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.map .yl{font:600 7px "IBM Plex Mono",monospace;fill:var(--ink);text-anchor:middle}
+.map .stop circle.open,.map .stop circle.tight{stroke:var(--ink);stroke-width:1.8}
+.map .stop circle.tight{stroke-dasharray:3 2}
+.map .stop text{font:600 10px "IBM Plex Mono",monospace;fill:var(--ink);text-anchor:middle;pointer-events:none}
+.map .stop text.on{fill:#0f2f63}
+.map .tap{cursor:pointer}
+.live{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.live div{border:1px solid var(--dim);border-radius:5px;padding:8px 10px}
+.live .mono{display:block;font-size:10.5px}
+.live b{font-size:20px}
+.tip{min-height:2.6em;color:#c7d8f5;font-size:14px;margin-top:10px}
+.loads{display:grid;gap:8px}
+.load{font:inherit;display:grid;grid-template-columns:30px 1fr auto;grid-template-areas:"seq ln pay" "seq meta pay";gap:2px 10px;align-items:center;text-align:left;padding:10px 12px;border:1.5px solid var(--dim);border-radius:5px;background:var(--bg2);color:var(--ink);cursor:pointer}
+.load.on{border-color:var(--amber);background:rgba(255,182,39,.1)}
+.load.cant{opacity:.42;cursor:not-allowed}
+.load .seq{grid-area:seq;font:700 16px "IBM Plex Mono",monospace;color:var(--amber);text-align:center}
+.load .ln{grid-area:ln;font-weight:600}
+.load .meta{grid-area:meta;font:500 12px "IBM Plex Mono",monospace;color:#b7cbee}
+.load .pay{grid-area:pay;font:600 14px "IBM Plex Mono",monospace;text-align:right;color:var(--amber)}
+.vs{width:100%;max-width:560px;border-collapse:collapse;margin:8px 0 14px;font-size:16px}
+.vs th{font:500 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--line);text-align:right;padding:6px 8px}
+.vs td{border-top:1px solid var(--dim);padding:9px 8px;text-align:right}
+.vs td:first-child,.vs th:first-child{text-align:left;color:#c7d8f5}
+.vs td:last-child{color:var(--amber)}
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:640px}
+.twin figure{margin:0;border:1px solid var(--dim);border-radius:6px;background:var(--bg2);padding:4px}
+.twin figcaption{font:500 12px "IBM Plex Mono",monospace;color:var(--line);text-align:center;padding:4px}
+.lesson{background:var(--paper);color:var(--paper-ink);border-radius:6px;padding:16px;margin:18px 0;max-width:640px}
+.lesson .mono{color:var(--paper-mute)}
+.lesson .lt{font-size:19px;font-weight:600;margin:.4em 0}
+.lesson .lm{color:#24467f;margin:.4em 0}
+.lesson a{color:#0f2f63;font-weight:700}
+.cost{max-width:560px;margin-top:14px}
+.cost div{display:flex;justify-content:space-between;border-top:1px solid var(--dim);padding:7px 0;font-size:15px}
+.cost span{color:#c7d8f5;text-transform:capitalize}
+.tw{overflow-x:auto}
+.src{border-collapse:collapse;font-size:13.5px;width:100%;min-width:560px}
+.src td{border-top:1px solid var(--dim);padding:8px 6px;vertical-align:top}
+.src .sc{display:block;font:500 11px "IBM Plex Mono",monospace;color:var(--line)}
 @media (max-width:620px){.two{grid-template-columns:1fr}.wg-grid{grid-template-columns:1fr}.sheet{padding:18px 14px 22px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 """
@@ -712,7 +784,7 @@ def shell(title: str, body: str, desc: str, root: str) -> str:
 <body>
 <div class="wrap">
 {body}
-<footer>{esc(TITLE)} · a paradigms framework for fulfillment and transportation. Not a tool, not a product, no pitch. Free to use; cite the door.</footer>
+<footer><a href="{root}">{esc(TITLE)}</a> · a practice yard for small fleets: plan a real day, priced with published numbers, against par. Free. The doors are the lessons.</footer>
 </div>
 </body>
 </html>
@@ -741,7 +813,7 @@ def plan_svg() -> str:
     s.append(t(920, 310, "DOCK WALL", 12, "end", "#c7d8f5"))
     for i, d in enumerate(DOORS):
         x = x0 + i * step
-        s.append(f'<a class="door-g" href="doors/{d["slug"]}/" aria-label="Door {i+1}: {esc(d["title"])}">'
+        s.append(f'<a class="door-g" href="{d["slug"]}/" aria-label="Door {i+1}: {esc(d["title"])}">'
                  f'<rect class="d" x="{x-30}" y="316" width="60" height="28" rx="2"/><text x="{x}" y="335" text-anchor="middle">D{i+1:02d}</text>'
                  f'<rect x="{x-26}" y="350" width="52" height="60" rx="3" fill="none" stroke="#5d84c2" stroke-width="1.2"/><line x1="{x-26}" y1="380" x2="{x+26}" y2="380" stroke="#5d84c2" stroke-width="1"/></a>')
     s.append('</svg>')
@@ -752,15 +824,15 @@ def render_index() -> str:
     groups: dict[str, list[tuple[int, dict]]] = {}
     for i, d in enumerate(DOORS, 1):
         groups.setdefault(d["group"], []).append((i, d))
-    parts = [f'<p class="mono">{esc(TITLE)} · sheet 1 · outbound</p>', "<h1>Pick a door.</h1>",
+    parts = ['<a class="back" href="../">← back to the practice yard</a>', f'<p class="mono">{esc(TITLE)} · the ten doors</p>', "<h1>Pick a door.</h1>",
              f'<p class="lede">{esc(TAGLINE)}</p>', f'<p class="aud">{esc(AUDIENCE)}</p>',
              f'<figure class="plan"><div class="swipe">swipe the plan → · tap a door</div>{plan_svg()}<div class="legend"><span>chute / lane</span><span class="lit">door, lit = open it</span><span>trailer at door</span></div></figure>']
     for g in ("On the floor", "Between buildings", "How to work"):
         parts.append(f'<div class="group"><span class="mono">{esc(g)}</span><div class="list">')
         for i, d in groups[g]:
-            parts.append(f'<a class="card" href="doors/{d["slug"]}/"><div class="n">D{i:02d}</div><div class="t">{esc(d["title"])}</div><div class="l">{esc(d["line"])}</div></a>')
+            parts.append(f'<a class="card" href="{d["slug"]}/"><div class="n">D{i:02d}</div><div class="t">{esc(d["title"])}</div><div class="l">{esc(d["line"])}</div></a>')
         parts.append("</div></div>")
-    return shell(TITLE, "\n".join(parts), TAGLINE, "")
+    return shell(f"The ten doors · {TITLE}", "\n".join(parts), TAGLINE, "../")
 
 
 def render_door(i: int, d: dict) -> str:
@@ -769,7 +841,7 @@ def render_door(i: int, d: dict) -> str:
     monday = "".join(f"<li>{esc(m)}</li>" for m in d["monday"])
     widget = WIDGETS.get(d.get("widget", ""), "")
     figure = FIGS[d["fig"]]()
-    body = f"""<a class="back" href="../../">← back to the plan</a>
+    body = f"""<a class="back" href="../">← all ten doors</a>
 <div class="sheet">
 <p class="mono">Door {i:02d} · {esc(d["group"])} · sheet {i+1}</p>
 <h2>{esc(d["title"])}</h2>
@@ -791,7 +863,18 @@ def render_door(i: int, d: dict) -> str:
     return shell(f"{d['title']} · {TITLE}", body, d["line"], "../../")
 
 
+TRAINER_DESC = "A practice yard for small fleets: plan a real day of courier routes, LTL pickup and delivery, or a truckload week, priced with published wages, diesel and rates, then see par."
+
+
+def render_trainer() -> str:
+    body = '<main id="app" aria-live="polite"><p class="mono">loading the yard…</p></main><script src="engine.js"></script><script src="ui.js"></script>'
+    return shell(TITLE, body, TRAINER_DESC, "")
+
+
 def main() -> None:
+    import subprocess, sys
+    if subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "model" / "compile.py")]).returncode:
+        sys.exit("model/compile.py failed: a required number has no sourced row")
     (SITE / "doors").mkdir(parents=True, exist_ok=True)
     keep = {d["slug"] for d in DOORS}
     for stale in (SITE / "doors").iterdir():
@@ -800,7 +883,10 @@ def main() -> None:
                 f.unlink()
             stale.rmdir()
     (SITE / "style.css").write_text(CSS.strip() + "\n")
-    (SITE / "index.html").write_text(render_index())
+    (SITE / "doors" / "index.html").write_text(render_index())
+    (SITE / "index.html").write_text(render_trainer())
+    for js in ("engine.js", "ui.js"):
+        (SITE / js).write_text((Path(__file__).resolve().parent / "trainer" / js).read_text())
     for i, d in enumerate(DOORS, 1):
         out = SITE / "doors" / d["slug"]
         out.mkdir(parents=True, exist_ok=True)
