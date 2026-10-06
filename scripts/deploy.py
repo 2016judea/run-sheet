@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deploy site/ to Vercel production over the REST API (project: dock-doors).
+"""Deploy site/ to Vercel production over the REST API (project: run-sheet-yard).
 
 Not the CLI. `vercel deploy --prod` has returned BLOCKED on this account with no
 error and no build log, while the same files posted to /v13/deployments went
@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "site"
 TEAM = "team_XnhPzBEcaSfEmZFo9M2isLFY"
-PROJECT = "dock-doors"
+PROJECT = "run-sheet-yard"
 SKIP_DIRS = {".git", "node_modules", "out", ".vercel", "__pycache__"}
 SKIP_FILES = {".env", ".DS_Store"}
 POLL_SECONDS = 3
