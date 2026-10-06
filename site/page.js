@@ -95,7 +95,7 @@
     const score = s.ruleGap >= s.gap - 1
       ? `By hand, this matched the best plan a computer found: <b>${usd(s.ruleGap)} ${s.cost ? "cheaper" : "more"} ${scope}</b>.`
       : `By hand, this gets <b>${usd(s.ruleGap)}</b> of the ${usd(s.gap)} a computer finds ${scope}.`;
-    return `<section class="story" data-i="${i}">
+    return `<section class="story" data-i="${i}" id="${s.seg.replace(/_/g, "-")}">
       <p class="mono">${esc(name)} · ${esc(kind)}</p>
       <h2>${esc(c.head)}</h2>
       <p class="fix">${esc(c.fix)}</p>
@@ -292,10 +292,13 @@
   }
 
   let M, S;
+  // #courier, #regional-tl … deep-link to one business's scene
   function route() {
     if (RAF) cancelAnimationFrame(RAF);
-    window.scrollTo(0, 0);
-    if (location.hash === "#sources") sources(M); else render(S);
+    if (location.hash === "#sources") { window.scrollTo(0, 0); sources(M); return; }
+    render(S);
+    const el = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+    if (el) el.scrollIntoView(); else window.scrollTo(0, 0);
   }
   Promise.all([fetch("model.json").then(r => r.json()), fetch("stories.json").then(r => r.json())])
     .then(([m, s]) => { M = m; S = s; window.addEventListener("hashchange", route); route(); })
