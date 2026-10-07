@@ -1,0 +1,14 @@
+<!-- DRAFT, UNSENT. To: Dax Johnson <dax.johnson@apexcapitalcorp.com> (PATTERN-GUESS) | record: https://www.apexcapitalcorp.com/blog/what-is-deadheading/ (2026-03-18) | 88 words -->
+
+Subject: Every empty mile
+
+"Every empty mile means less time for paid hauls." You wrote that in March, in Apex's guide to deadheading.
+
+I ran one Minneapolis truck's week both ways on a free page. The top-paying load, Duluth to Kansas City at $1,719, nets -$61 once you count the 165 empty miles to reach it at $2.17 a mile. Minneapolis to Madison pays $814 and clears $20 an hour. Ranked by net per hour after the empty miles, the week comes out $512 better.
+
+https://run-sheet-yard.vercel.app/#regional-tl
+
+Free, no reply needed.
+
+Best,
+Aidan
