@@ -761,6 +761,7 @@ def shell(title: str, body: str, desc: str, root: str) -> str:
 <meta name="description" content="{esc(desc)}">
 {FONTS}
 <link rel="stylesheet" href="{root}style.css">
+<script>window.va=window.va||function(){{(window.vaq=window.vaq||[]).push(arguments)}};</script><script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <div class="wrap">
