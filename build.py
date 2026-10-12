@@ -751,6 +751,10 @@ def para(s: str) -> str:
     return "".join(f"<p>{esc(' '.join(block.split()))}</p>" for block in s.strip().split("\n\n"))
 
 
+# The shared PostHog block (?me=1 opt-out, no headless capture): ~/.claude/skills/site-analytics/posthog_inject.py --print.
+POSTHOG = (Path(__file__).resolve().parent / "scripts" / "posthog.html").read_text()
+
+
 def shell(title: str, body: str, desc: str, root: str) -> str:
     return f"""<!doctype html>
 <html lang="en">
@@ -762,7 +766,7 @@ def shell(title: str, body: str, desc: str, root: str) -> str:
 {FONTS}
 <link rel="stylesheet" href="{root}style.css">
 <script>window.va=window.va||function(){{(window.vaq=window.vaq||[]).push(arguments)}};</script><script defer src="/_vercel/insights/script.js"></script>
-</head>
+{POSTHOG}</head>
 <body>
 <div class="wrap">
 {body}
