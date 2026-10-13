@@ -1,4 +1,12 @@
-# Run Sheet (was Dock Doors) — https://run-sheet-yard.vercel.app
+# Run Sheet
+
+**Live:** https://run-sheet-yard.vercel.app
+
+**Tools and methodologies for optimizing transportation and D2D delivery fleets.**
+
+— Aidan, [*Business Prototypes*](https://randomaidan.substack.com/p/business-prototypes), 2026-10-12. (Was Dock Doors.)
+
+## What is live
 
 Same day, planned twice. Seven kinds of small fleet — couriers, route trucks, furniture and
 building-supply delivery, LTL pickup and delivery, regional truckload, drayage. For each,
@@ -21,4 +29,5 @@ solver. The page draws both as you scroll; nothing to press. Each story links it
 - `build.py` — the ten doors (now the lessons, at `/doors/`) and the page shell.
 
 The build asserts a banned-word list (no Amazon, no "optimize", no "dashboard"): the
-operators this is for hate those words — see `research/vernacular.md`.
+operators this is for hate those words — see `research/vernacular.md`. That is why the vision line above lives in this README
+and not on the page.
