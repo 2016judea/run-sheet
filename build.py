@@ -20,6 +20,7 @@ constant, a dollar figure or a colleague. The build asserts a banned-word list.
 from __future__ import annotations
 
 import html
+import json
 import random
 import re
 from pathlib import Path
@@ -740,6 +741,60 @@ a:focus-visible,button:focus-visible,.door-g:focus{outline:2px solid var(--amber
 .src .sc{display:block;font:500 11px "IBM Plex Mono",monospace;color:var(--line)}
 @media (max-width:620px){.two{grid-template-columns:1fr}.wg-grid{grid-template-columns:1fr}.sheet{padding:18px 14px 22px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Your own day (/day/, /for/<token>/): trainer/day.js */
+.dayhead h1{font-size:clamp(36px,9vw,64px)}
+.rec{border:1px solid var(--dim);border-radius:6px;padding:14px 16px;margin:16px 0 4px;background:var(--bg2)}
+.rec .org{font-weight:700;font-size:20px;margin:6px 0 2px}
+.rec p{margin:.3em 0;color:#c7d8f5;font-size:15px}
+.rec a{font-size:14px}
+#out{margin-top:22px;transition:opacity .2s}
+#out.busy{opacity:.45}
+.hl{font-size:clamp(28px,7vw,44px);line-height:1.08;margin:6px 0 8px;letter-spacing:-.01em;text-wrap:balance}
+.gap{color:var(--amber);font-size:18px;margin:0 0 14px;max-width:56ch}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pl{border:1px solid var(--dim);border-radius:6px;padding:10px 10px 6px;background:var(--bg2);min-width:0}
+.pl.best{border-color:var(--amber)}
+.pl .mono{font-size:11px;letter-spacing:.06em;line-height:1.3;min-height:2.6em;display:block}
+.pl.a .mono{color:#ff7aa8}.pl.best .mono{color:var(--amber)}
+.pl dl{margin:6px 0 0;display:grid;grid-template-columns:1fr;gap:0}
+.pl dt{font:500 11px "IBM Plex Mono",monospace;color:var(--line);margin-top:6px}
+.pl dd{margin:0;font-weight:600;font-size:18px}
+.mapbox{margin:14px 0 0;border:1px solid var(--dim);border-radius:6px;background:var(--bg2);padding:10px;display:flex;gap:12px;align-items:flex-end}
+.ymap{width:160px;height:160px;flex:none}
+.ymap circle{fill:var(--line)}.ymap .yd{fill:var(--amber)}
+.note{color:#9fb8e2;font-size:14px;max-width:62ch}
+#sheets{margin-top:22px}
+.lock{border:1.5px solid var(--amber);border-radius:6px;padding:16px;background:var(--bg2)}
+.lk{margin:.4em 0;max-width:56ch}
+.price{font-weight:600;font-size:18px;margin:.6em 0 .8em}
+.btn{font:600 16px "Archivo",sans-serif;padding:12px 18px;min-height:48px;border-radius:6px;border:0;background:var(--amber);color:#0f2f63;cursor:pointer}
+.btn:disabled{opacity:.6}
+.link{display:block;margin-top:12px;padding:10px 0;background:none;border:0;color:var(--amber);font:500 14px "IBM Plex Mono",monospace;cursor:pointer;text-align:left}
+.pwf{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pwf input{flex:1 1 200px;min-width:0;font:500 16px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;padding:11px 12px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.pwf[hidden]{display:none}
+.pwerr{flex-basis:100%;margin:2px 0 0;font-size:14px;min-height:1.2em;color:#ffb3c9}
+#checkout{margin-top:14px;border-radius:6px;overflow:hidden}
+.truck{border-top:1px solid var(--dim);padding:10px 0}
+.truck p{margin:0 0 6px}
+.truck ol{margin:0;padding-left:1.6em;font-size:15px}
+.truck li{margin:3px 0}
+.eta{font:500 13px "IBM Plex Mono",monospace;color:var(--line);margin-right:6px}
+.win{font:500 12px "IBM Plex Mono",monospace;color:var(--amber)}
+.late{color:#ff7aa8}
+.yours{margin-top:34px;border-top:1px solid var(--dim);padding-top:18px}
+.yours h2{font-size:26px;margin:6px 0 6px}
+.yours form{display:grid;gap:12px;max-width:640px}
+.yours label{display:flex;flex-direction:column;gap:5px;font-size:14px;color:#c7d8f5}
+.yours input,.yours select,.yours textarea{font:16px "Archivo",sans-serif;padding:10px 12px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);width:100%}
+.yours textarea{font:13px/1.4 "IBM Plex Mono",monospace;min-height:150px}
+.yours .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.yours .cols{color:#9fb8e2;font-size:13.5px;max-width:62ch}
+#err{color:#ffb3c9;min-height:1.2em;margin:10px 0 0}
+.others{margin-top:30px;color:#c7d8f5;font-size:15px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:420px){.pl dd{font-size:16px}.mapbox{flex-direction:column;align-items:flex-start}.ymap{width:100%;height:auto;max-width:300px}}
 """
 
 
@@ -770,7 +825,7 @@ def shell(title: str, body: str, desc: str, root: str) -> str:
 <body>
 <div class="wrap">
 {body}
-<footer><a href="{root}">{esc(TITLE)}</a> · the same day run two ways, for seven kinds of small fleet, priced with published numbers. Free.</footer>
+<footer><a href="{root}">{esc(TITLE)}</a> · the same day run two ways, for seven kinds of small fleet, priced with published numbers.</footer>
 </div>
 </body>
 </html>
@@ -849,6 +904,70 @@ def render_door(i: int, d: dict) -> str:
     return shell(f"{d['title']} · {TITLE}", body, d["line"], "../../")
 
 
+
+# ---- your own day: /day/ and /for/<token>/ (trainer/day.js, site/api/plan.js) -------
+ROOT = Path(__file__).resolve().parent
+PRICE = int(re.search(r"const PRICE_USD = (\d+);", (SITE / "api" / "_lib.js").read_text()).group(1))
+STRIPE_PK = "pk_live_51TUvvcBzD4mN8eOD28H6oQkFwFHwF1SLtWxN1vHRmnSxntWFefgd33mEIVmjv8ekxWgkZft3OpPlzmVXMIeHPBwj003998hjTf"
+SEG_LABEL = {"courier": "Courier, vans", "route_dist": "Route delivery, box trucks", "final_mile_bulky": "Furniture & appliance, two-person crews",
+             "building_supply": "Lumber & building supply, flatbeds", "ltl_pd": "LTL pickup & delivery"}
+SEG_WORD = {"courier": "local delivery", "route_dist": "route delivery", "final_mile_bulky": "furniture and appliance delivery",
+            "building_supply": "building-supply delivery", "ltl_pd": "pickup and delivery"}
+
+
+def day_form(seg: str) -> str:
+    opts = "".join(f'<option value="{k}"{" selected" if k == seg else ""}>{esc(v)}</option>' for k, v in SEG_LABEL.items())
+    return f"""<section class="yours" id="yours">
+<p class="mono">your own day</p>
+<h2>Put in yesterday's stops.</h2>
+<form id="dayform">
+<label>Stop list, as a CSV out of your route app or a spreadsheet<input type="file" name="file" accept=".csv,.tsv,.txt,text/csv"></label>
+<label>…or paste it<textarea name="csv" spellcheck="false" placeholder="route,stop,address,city,zip,window_start,window_end,weight&#10;Route 1,1,1200 W Broadway Ave,Minneapolis,55411,9:00,11:00,240"></textarea></label>
+<div class="row2"><label>Kind of work<select name="seg">{opts}</select></label>
+<label>Trucks you had<input name="trucks" type="number" min="1" max="12" inputmode="numeric"></label></div>
+<label>Yard address (or lat, lon)<input name="yard" autocomplete="street-address" placeholder="where every truck starts and ends"></label>
+<button class="btn" type="submit">Plan my day</button>
+<p class="cols">Reads columns called address (or lat and lon), city, zip, route or driver, stop or sequence, window start and end, weight, pallets, service minutes. Only address is needed. With a route column, “as run” is your own routes. Up to 120 stops. Nothing you put in is kept.</p>
+</form>
+<p id="err" role="alert"></p>
+</section>"""
+
+
+def day_page(title: str, top: str, data: dict, root: str, desc: str) -> str:
+    body = f"""<a class="back" href="{root}">← the seven days, played out</a>
+<div class="dayhead">{top}</div>
+<div id="out" aria-live="polite"><p class="mono">planning…</p></div>
+<div id="sheets"></div>
+{day_form(data["day"]["seg"])}
+<p class="others">Seven more days are played out start to finish on <a href="{root}">the front page</a>: courier, route delivery, LTL, furniture, building supply, truckload, drayage.</p>
+<script>window.RS_DAY={json.dumps(data, separators=(",", ":"))};</script><script src="{root}day.js"></script>"""
+    return shell(title, body, desc, root)
+
+
+def render_day(days: dict) -> str:
+    top = f"""<p class="mono">{esc(TITLE)} · your own day</p>
+<h1>Your day, planned three ways.</h1>
+<p class="lede">Put in a day's stop list. See how it ran, how a dispatcher with a pen would run it, and the best plan we can find, in your own miles and dollars.</p>
+<p class="aud">Below is a made-up courier morning so you can see it work.</p>"""
+    data = {"day": days["sample"], "price": PRICE, "stripePk": STRIPE_PK, "token": None}
+    return day_page(f"Your own day · {TITLE}", top, data, "../", "Put in a day's stop list: see how it ran, how a dispatcher would run it by hand, and the best plan, in your own miles and dollars.")
+
+
+def render_for(p: dict, day: dict) -> str:
+    units = p["power_units"]
+    shaped = f"{day['trucks']} of your {units}" if day["trucks"] < units else str(units)
+    # trucks = min(power units, drivers, what one upload holds): scripts/days.js
+    top = f"""<p class="mono">{esc(TITLE)} · for {esc(p["org"])}</p>
+<div class="rec"><p class="mono">your FMCSA filing · USDOT {p["dot"]}</p>
+<p class="org">{esc(p["org"])}</p>
+<p>{units} power units, {p["drivers"]} drivers, {esc(p["city"])}. Every driver runs inside 100 miles. Filed {p["mcs150_date"]}.</p>
+<a href="{esc(p["record_url"])}">your record on SAFER</a></div>
+<h1>A day shaped like yours.</h1>
+<p class="lede">{esc(shaped)} trucks out of your yard, {len(day["stops"])} stops of {SEG_WORD[p["segment"]]} around it, priced with published wages and costs. Then put in a real day of yours below.</p>"""
+    data = {"day": day, "price": PRICE, "stripePk": STRIPE_PK, "token": p["token"]}
+    return day_page(f"{p['org']} · {TITLE}", top, data, "../../", f"A day shaped like {p['org']}'s, planned three ways.")
+
+
 TRAINER_DESC = "Same day, run two ways: seven kinds of small fleet, each day priced with published wages, diesel and rates, run the usual way and then by a rule a dispatcher can follow tomorrow."
 
 
@@ -876,6 +995,29 @@ def main() -> None:
     for stale in ("engine.js", "ui.js"):
         (SITE / stale).unlink(missing_ok=True)
     (SITE / "page.js").write_text((Path(__file__).resolve().parent / "trainer" / "page.js").read_text())
+    # your own day: the engine the API runs, the days it opens on, the pages
+    rs = SITE / "api" / "_rs"
+    rs.mkdir(parents=True, exist_ok=True)
+    for f in ("engine.js", "rules.js", "upload.js"):
+        (rs / f).write_text((ROOT / "trainer" / f).read_text())
+    (rs / "model.json").write_text((SITE / "model.json").read_text())
+    if subprocess.run(["node", str(ROOT / "scripts" / "days.js")], stdout=subprocess.DEVNULL).returncode:
+        sys.exit("scripts/days.js failed")
+    days = json.loads((SITE / "days.json").read_text())
+    (SITE / "days.json").unlink()
+    (SITE / "day.js").write_text((ROOT / "trainer" / "day.js").read_text())
+    (SITE / "day").mkdir(exist_ok=True)
+    (SITE / "day" / "index.html").write_text(render_day(days))
+    recips = json.loads((ROOT / "outreach" / "round1" / "recipients.json").read_text())
+    for stale in (SITE / "for").glob("*/") if (SITE / "for").exists() else []:
+        if stale.name not in {p["token"] for p in recips}:
+            for f in stale.iterdir():
+                f.unlink()
+            stale.rmdir()
+    for p in recips:
+        out = SITE / "for" / p["token"]
+        out.mkdir(parents=True, exist_ok=True)
+        (out / "index.html").write_text(render_for(p, days[p["token"]]))
     for i, d in enumerate(DOORS, 1):
         out = SITE / "doors" / d["slug"]
         out.mkdir(parents=True, exist_ok=True)

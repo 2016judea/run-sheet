@@ -1,0 +1,15 @@
+To: Cate Schloer <cate@capitalcityglassinc.com>
+Subject: A day shaped like Capital City Glass's
+
+Hi Cate,
+
+Your FMCSA filing lists 4 power units and 11 drivers out of Blaine, every driver running inside 100 miles.
+
+So I priced a day shaped like that: four trucks and 32 jobsite drops around your yard, at published wages and diesel. Dealt out the way most yards do it, it runs 3 stops late. The best plan we found runs none. That's $815 on one day.
+
+Eight days are open to poke at, no login: https://run-sheet-yard.vercel.app/for/d2dfea14/
+One of them is yours. You can drop a real stop list in there too and see the totals. The run sheets for your own days, every truck in order with arrival times, are $50, once.
+
+Best,
+Aidan
+https://randomaidan.substack.com/p/business-prototypes

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Royal Star Furniture · Run Sheet</title>
+<meta name="description" content="A day shaped like Royal Star Furniture's, planned three ways.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
+<!-- bm-posthog:begin v2 — shared across every Vercel prototype; source ~/.claude/skills/site-analytics/posthog_snippet.html. ?me=1 opts this browser out on this site (?me=0 undoes); ?me=1&next=host1,host2 walks the opt-out across sites; headless (navigator.webdriver) never loads it. -->
+<script>
+(function(w,d){var S="run-sheet",K="bm_me",me=false,u,p,n;
+try{u=new URLSearchParams(location.search);p=u.get("me");n=u.get("next");}catch(e){}
+try{if(p==="1"){localStorage.setItem(K,"1");}else if(p==="0"){localStorage.removeItem(K);}}catch(e){}
+if(p==="1"){d.cookie=K+"=1; path=/; max-age=63072000; SameSite=Lax";}else if(p==="0"){d.cookie=K+"=; path=/; max-age=0; SameSite=Lax";}
+try{me=localStorage.getItem(K)==="1";}catch(e){}
+if(!me&&/(?:^|; )bm_me=1/.test(d.cookie))me=true;
+if(p==="1"&&n){var h=n.split(","),f=h.shift();if(/^[a-z0-9.-]+$/.test(f)&&(f.slice(-11)===".vercel.app"||f==="brickandmortar.dev"||f==="readglean.com")){location.replace("https://"+f+"/?me=1"+(h.length?"&next="+h.join(","):""));}}
+if(navigator.webdriver===true)return;
+!function(t,e){var o,n,p,r;e.__SV||(w.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify setPersonProperties reset get_distinct_id get_session_id alias set_config startSessionRecording stopSessionRecording opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing captureException getFeatureFlag isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(d,w.posthog||[]);
+posthog.init("phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx",{api_host:"https://us.i.posthog.com",person_profiles:"identified_only",persistence:"localStorage+cookie",opt_out_capturing_by_default:me});
+if(me){posthog.opt_out_capturing();}else{if(p==="0")posthog.opt_in_capturing();posthog.register({site:S});}
+})(window,document);
+</script>
+<!-- bm-posthog:end -->
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../">← the seven days, played out</a>
+<div class="dayhead"><p class="mono">Run Sheet · for Royal Star Furniture</p>
+<div class="rec"><p class="mono">your FMCSA filing · USDOT 900973</p>
+<p class="org">Royal Star Furniture</p>
+<p>3 power units, 2 drivers, South ST Paul. Every driver runs inside 100 miles. Filed 2026-04-30.</p>
+<a href="https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&amp;query_type=queryCarrierSnapshot&amp;query_param=USDOT&amp;query_string=900973">your record on SAFER</a></div>
+<h1>A day shaped like yours.</h1>
+<p class="lede">2 of your 3 trucks out of your yard, 20 stops of furniture and appliance delivery around it, priced with published wages and costs. Then put in a real day of yours below.</p></div>
+<div id="out" aria-live="polite"><p class="mono">planning…</p></div>
+<div id="sheets"></div>
+<section class="yours" id="yours">
+<p class="mono">your own day</p>
+<h2>Put in yesterday's stops.</h2>
+<form id="dayform">
+<label>Stop list, as a CSV out of your route app or a spreadsheet<input type="file" name="file" accept=".csv,.tsv,.txt,text/csv"></label>
+<label>…or paste it<textarea name="csv" spellcheck="false" placeholder="route,stop,address,city,zip,window_start,window_end,weight&#10;Route 1,1,1200 W Broadway Ave,Minneapolis,55411,9:00,11:00,240"></textarea></label>
+<div class="row2"><label>Kind of work<select name="seg"><option value="courier">Courier, vans</option><option value="route_dist">Route delivery, box trucks</option><option value="final_mile_bulky" selected>Furniture &amp; appliance, two-person crews</option><option value="building_supply">Lumber &amp; building supply, flatbeds</option><option value="ltl_pd">LTL pickup &amp; delivery</option></select></label>
+<label>Trucks you had<input name="trucks" type="number" min="1" max="12" inputmode="numeric"></label></div>
+<label>Yard address (or lat, lon)<input name="yard" autocomplete="street-address" placeholder="where every truck starts and ends"></label>
+<button class="btn" type="submit">Plan my day</button>
+<p class="cols">Reads columns called address (or lat and lon), city, zip, route or driver, stop or sequence, window start and end, weight, pallets, service minutes. Only address is needed. With a route column, “as run” is your own routes. Up to 120 stops. Nothing you put in is kept.</p>
+</form>
+<p id="err" role="alert"></p>
+</section>
+<p class="others">Seven more days are played out start to finish on <a href="../../">the front page</a>: courier, route delivery, LTL, furniture, building supply, truckload, drayage.</p>
+<script>window.RS_DAY={"day":{"seg":"final_mile_bulky","trucks":2,"yard":{"lat":44.893927033366,"lon":-93.035803091833},"stops":[{"label":"Stop 01","lat":45.01892,"lon":-93.0585,"lb":685},{"label":"Stop 02","lat":44.78851,"lon":-93.02248,"lb":898},{"label":"Stop 03","lat":44.98216,"lon":-93.11214,"lb":869},{"label":"Stop 04","lat":44.76847,"lon":-93.06426,"lb":648},{"label":"Stop 05","lat":44.95137,"lon":-93.19069,"lb":536},{"label":"Stop 06","lat":44.85366,"lon":-93.03873,"lb":880},{"label":"Stop 07","lat":44.87585,"lon":-93.0668,"lb":659},{"label":"Stop 08","lat":44.8246,"lon":-93.14996,"lb":816},{"label":"Stop 09","lat":44.8277,"lon":-93.20552,"lb":1140},{"label":"Stop 10","lat":44.95262,"lon":-93.1137,"lb":534},{"label":"Stop 11","lat":44.81169,"lon":-93.2038,"lb":820,"open":10,"close":13},{"label":"Stop 12","lat":44.96055,"lon":-93.05762,"lb":903},{"label":"Stop 13","lat":44.80551,"lon":-92.94479,"lb":930},{"label":"Stop 14","lat":44.95471,"lon":-92.98877,"lb":696},{"label":"Stop 15","lat":44.87881,"lon":-93.17841,"lb":561},{"label":"Stop 16","lat":44.79823,"lon":-93.07167,"lb":651},{"label":"Stop 17","lat":45.00869,"lon":-93.06252,"lb":1024},{"label":"Stop 18","lat":44.91562,"lon":-93.05754,"lb":1102},{"label":"Stop 19","lat":44.9264,"lon":-93.0644,"lb":877},{"label":"Stop 20","lat":44.88103,"lon":-92.89093,"lb":1131}]},"price":50,"stripePk":"pk_live_51TUvvcBzD4mN8eOD28H6oQkFwFHwF1SLtWxN1vHRmnSxntWFefgd33mEIVmjv8ekxWgkZft3OpPlzmVXMIeHPBwj003998hjTf","token":"50831b99"};</script><script src="../../day.js"></script>
+<footer><a href="../../">Run Sheet</a> · the same day run two ways, for seven kinds of small fleet, priced with published numbers.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,2108 @@
+{
+ "18391079": {
+  "trucks": 3,
+  "stops": 75,
+  "asRun": {
+   "trucks": 3,
+   "miles": 242,
+   "hours": 32.7,
+   "late": 8,
+   "overtime": 8.7,
+   "cost": 1154,
+   "dayCost": 1292,
+   "profit": 2,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 167,
+   "hours": 26.5,
+   "late": 1,
+   "overtime": 2.5,
+   "cost": 950,
+   "dayCost": 967,
+   "profit": 327,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 154,
+   "hours": 25.7,
+   "late": 0,
+   "overtime": 1.7,
+   "cost": 921,
+   "dayCost": 921,
+   "profit": 373,
+   "invalid": null
+  },
+  "gap": 371,
+  "ruleGap": 325
+ },
+ "67730319": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 145,
+   "hours": 22.4,
+   "late": 7,
+   "overtime": 6.4,
+   "cost": 969,
+   "dayCost": 1028,
+   "profit": -692,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 114,
+   "hours": 18.5,
+   "late": 0,
+   "overtime": 2.5,
+   "cost": 839,
+   "dayCost": 839,
+   "profit": -503,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 96,
+   "hours": 17.4,
+   "late": 1,
+   "overtime": 1.4,
+   "cost": 792,
+   "dayCost": 801,
+   "profit": -465,
+   "invalid": null
+  },
+  "gap": 227,
+  "ruleGap": 188
+ },
+ "50bce623": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 144,
+   "hours": 25.2,
+   "late": 10,
+   "overtime": 9.2,
+   "cost": 851,
+   "dayCost": 1024,
+   "profit": -161,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 118,
+   "hours": 18.1,
+   "late": 3,
+   "overtime": 2.1,
+   "cost": 647,
+   "dayCost": 699,
+   "profit": 164,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 107,
+   "hours": 17.4,
+   "late": 1,
+   "overtime": 1.4,
+   "cost": 623,
+   "dayCost": 640,
+   "profit": 222,
+   "invalid": null
+  },
+  "gap": 384,
+  "ruleGap": 325
+ },
+ "464752f5": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 113,
+   "hours": 24.5,
+   "late": 9,
+   "overtime": 8.5,
+   "cost": 820,
+   "dayCost": 975,
+   "profit": -112,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 91,
+   "hours": 16.4,
+   "late": 1,
+   "overtime": 0.7,
+   "cost": 588,
+   "dayCost": 606,
+   "profit": 257,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 88,
+   "hours": 16.2,
+   "late": 0,
+   "overtime": 0.7,
+   "cost": 583,
+   "dayCost": 583,
+   "profit": 280,
+   "invalid": null
+  },
+  "gap": 392,
+  "ruleGap": 369
+ },
+ "f03494e6": {
+  "trucks": 4,
+  "stops": 100,
+  "asRun": {
+   "trucks": 4,
+   "miles": 389,
+   "hours": 48.8,
+   "late": 11,
+   "overtime": 16.8,
+   "cost": 1710,
+   "dayCost": 1900,
+   "profit": -175,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 233,
+   "hours": 36,
+   "late": 0,
+   "overtime": 4,
+   "cost": 1289,
+   "dayCost": 1289,
+   "profit": 436,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 209,
+   "hours": 34.5,
+   "late": 0,
+   "overtime": 2.5,
+   "cost": 1238,
+   "dayCost": 1238,
+   "profit": 487,
+   "invalid": null
+  },
+  "gap": 662,
+  "ruleGap": 610
+ },
+ "fac7471c": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 133,
+   "hours": 22.5,
+   "late": 6,
+   "overtime": 6.5,
+   "cost": 775,
+   "dayCost": 878,
+   "profit": -16,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 130,
+   "hours": 18.9,
+   "late": 1,
+   "overtime": 2.9,
+   "cost": 675,
+   "dayCost": 692,
+   "profit": 170,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 111,
+   "hours": 17.7,
+   "late": 1,
+   "overtime": 1.7,
+   "cost": 633,
+   "dayCost": 650,
+   "profit": 212,
+   "invalid": null
+  },
+  "gap": 228,
+  "ruleGap": 186
+ },
+ "3f7e4891": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 134,
+   "hours": 26.2,
+   "late": 10,
+   "overtime": 10.2,
+   "cost": 875,
+   "dayCost": 1047,
+   "profit": -185,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 118,
+   "hours": 18.1,
+   "late": 1,
+   "overtime": 2.1,
+   "cost": 648,
+   "dayCost": 665,
+   "profit": 198,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 106,
+   "hours": 17.3,
+   "late": 1,
+   "overtime": 1.3,
+   "cost": 621,
+   "dayCost": 639,
+   "profit": 224,
+   "invalid": null
+  },
+  "gap": 408,
+  "ruleGap": 382
+ },
+ "26c2007a": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 127,
+   "hours": 23.5,
+   "late": 7,
+   "overtime": 7.5,
+   "cost": 799,
+   "dayCost": 919,
+   "profit": -57,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 127,
+   "hours": 18.7,
+   "late": 0,
+   "overtime": 2.7,
+   "cost": 667,
+   "dayCost": 667,
+   "profit": 195,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 113,
+   "hours": 17.8,
+   "late": 0,
+   "overtime": 1.8,
+   "cost": 638,
+   "dayCost": 638,
+   "profit": 225,
+   "invalid": null
+  },
+  "gap": 282,
+  "ruleGap": 252
+ },
+ "9bf428d3": {
+  "trucks": 4,
+  "stops": 80,
+  "asRun": {
+   "trucks": 4,
+   "miles": 336,
+   "hours": 49.3,
+   "late": 14,
+   "overtime": 17.3,
+   "cost": 1699,
+   "dayCost": 1940,
+   "profit": -560,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 224,
+   "hours": 31.3,
+   "late": 0,
+   "overtime": 0.5,
+   "cost": 1158,
+   "dayCost": 1158,
+   "profit": 222,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 205,
+   "hours": 30.2,
+   "late": 0,
+   "overtime": 0.3,
+   "cost": 1118,
+   "dayCost": 1118,
+   "profit": 262,
+   "invalid": null
+  },
+  "gap": 822,
+  "ruleGap": 783
+ },
+ "fcb1a64b": {
+  "trucks": 1,
+  "stops": 25,
+  "asRun": {
+   "trucks": 1,
+   "miles": 55,
+   "hours": 11.9,
+   "late": 1,
+   "overtime": 3.9,
+   "cost": 400,
+   "dayCost": 417,
+   "profit": 14,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 1,
+   "miles": 58,
+   "hours": 9,
+   "late": 0,
+   "overtime": 1,
+   "cost": 321,
+   "dayCost": 321,
+   "profit": 110,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 1,
+   "miles": 46,
+   "hours": 8.3,
+   "late": 0,
+   "overtime": 0.3,
+   "cost": 297,
+   "dayCost": 297,
+   "profit": 134,
+   "invalid": null
+  },
+  "gap": 120,
+  "ruleGap": 96
+ },
+ "0a7ca737": {
+  "trucks": 4,
+  "stops": 80,
+  "asRun": {
+   "trucks": 4,
+   "miles": 316,
+   "hours": 46.7,
+   "late": 11,
+   "overtime": 14.7,
+   "cost": 1618,
+   "dayCost": 1808,
+   "profit": -428,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 237,
+   "hours": 31.8,
+   "late": 0,
+   "overtime": 7.8,
+   "cost": 1178,
+   "dayCost": 1178,
+   "profit": 202,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 182,
+   "hours": 28.4,
+   "late": 1,
+   "overtime": 4.4,
+   "cost": 1060,
+   "dayCost": 1077,
+   "profit": 303,
+   "invalid": null
+  },
+  "gap": 731,
+  "ruleGap": 629
+ },
+ "baf3ad92": {
+  "trucks": 4,
+  "stops": 90,
+  "asRun": {
+   "trucks": 4,
+   "miles": 331,
+   "hours": 47.4,
+   "late": 11,
+   "overtime": 15.4,
+   "cost": 1643,
+   "dayCost": 1833,
+   "profit": -281,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 265,
+   "hours": 35.9,
+   "late": 2,
+   "overtime": 3.9,
+   "cost": 1302,
+   "dayCost": 1336,
+   "profit": 216,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 211,
+   "hours": 32.6,
+   "late": 0,
+   "overtime": 1.5,
+   "cost": 1187,
+   "dayCost": 1187,
+   "profit": 366,
+   "invalid": null
+  },
+  "gap": 646,
+  "ruleGap": 497
+ },
+ "173549de": {
+  "trucks": 4,
+  "stops": 90,
+  "asRun": {
+   "trucks": 4,
+   "miles": 374,
+   "hours": 50.7,
+   "late": 9,
+   "overtime": 18.7,
+   "cost": 1754,
+   "dayCost": 1909,
+   "profit": -356,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 211,
+   "hours": 32.5,
+   "late": 1,
+   "overtime": 0.9,
+   "cost": 1185,
+   "dayCost": 1202,
+   "profit": 350,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 188,
+   "hours": 31.1,
+   "late": 0,
+   "overtime": 0.1,
+   "cost": 1136,
+   "dayCost": 1136,
+   "profit": 417,
+   "invalid": null
+  },
+  "gap": 773,
+  "ruleGap": 707
+ },
+ "647eddae": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 115,
+   "hours": 26.8,
+   "late": 11,
+   "overtime": 10.8,
+   "cost": 883,
+   "dayCost": 1073,
+   "profit": -211,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 111,
+   "hours": 17.7,
+   "late": 0,
+   "overtime": 1.7,
+   "cost": 633,
+   "dayCost": 633,
+   "profit": 229,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 98,
+   "hours": 16.9,
+   "late": 0,
+   "overtime": 1.7,
+   "cost": 605,
+   "dayCost": 605,
+   "profit": 257,
+   "invalid": null
+  },
+  "gap": 468,
+  "ruleGap": 440
+ },
+ "a4a84ea5": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 134,
+   "hours": 26.3,
+   "late": 10,
+   "overtime": 10.3,
+   "cost": 879,
+   "dayCost": 1052,
+   "profit": -189,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 145,
+   "hours": 19.8,
+   "late": 3,
+   "overtime": 3.8,
+   "cost": 707,
+   "dayCost": 758,
+   "profit": 104,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 121,
+   "hours": 18.3,
+   "late": 0,
+   "overtime": 2.3,
+   "cost": 654,
+   "dayCost": 654,
+   "profit": 208,
+   "invalid": null
+  },
+  "gap": 397,
+  "ruleGap": 293
+ },
+ "43bec617": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 119,
+   "hours": 23.2,
+   "late": 5,
+   "overtime": 7.2,
+   "cost": 786,
+   "dayCost": 872,
+   "profit": -10,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 108,
+   "hours": 17.5,
+   "late": 1,
+   "overtime": 1.5,
+   "cost": 626,
+   "dayCost": 643,
+   "profit": 219,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 100,
+   "hours": 17,
+   "late": 0,
+   "overtime": 1,
+   "cost": 609,
+   "dayCost": 609,
+   "profit": 254,
+   "invalid": null
+  },
+  "gap": 264,
+  "ruleGap": 229
+ },
+ "228e1899": {
+  "trucks": 2,
+  "stops": 50,
+  "asRun": {
+   "trucks": 2,
+   "miles": 128,
+   "hours": 25.5,
+   "late": 7,
+   "overtime": 9.5,
+   "cost": 852,
+   "dayCost": 973,
+   "profit": -110,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 147,
+   "hours": 19.9,
+   "late": 1,
+   "overtime": 3.9,
+   "cost": 709,
+   "dayCost": 726,
+   "profit": 136,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 123,
+   "hours": 18.4,
+   "late": 1,
+   "overtime": 2.4,
+   "cost": 659,
+   "dayCost": 676,
+   "profit": 187,
+   "invalid": null
+  },
+  "gap": 297,
+  "ruleGap": 247
+ },
+ "03010b9d": {
+  "trucks": 6,
+  "stops": 84,
+  "asRun": {
+   "trucks": 6,
+   "miles": 592,
+   "hours": 73.4,
+   "late": 11,
+   "overtime": 25.4,
+   "cost": 3237,
+   "dayCost": 3330,
+   "profit": -2624,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 6,
+   "miles": 345,
+   "hours": 46,
+   "late": 1,
+   "overtime": 1.8,
+   "cost": 2301,
+   "dayCost": 2310,
+   "profit": -1604,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 6,
+   "miles": 293,
+   "hours": 42.7,
+   "late": 0,
+   "overtime": 1,
+   "cost": 2162,
+   "dayCost": 2162,
+   "profit": -1457,
+   "invalid": null
+  },
+  "gap": 1167,
+  "ruleGap": 1020
+ },
+ "14d8e506": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 137,
+   "hours": 23.3,
+   "late": 4,
+   "overtime": 7.3,
+   "cost": 979,
+   "dayCost": 1012,
+   "profit": -676,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 142,
+   "hours": 20.2,
+   "late": 0,
+   "overtime": 4.2,
+   "cost": 914,
+   "dayCost": 914,
+   "profit": -578,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 106,
+   "hours": 18,
+   "late": 1,
+   "overtime": 2.3,
+   "cost": 820,
+   "dayCost": 828,
+   "profit": -492,
+   "invalid": null
+  },
+  "gap": 184,
+  "ruleGap": 99
+ },
+ "37cbad59": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 122,
+   "hours": 23,
+   "late": 4,
+   "overtime": 7,
+   "cost": 954,
+   "dayCost": 988,
+   "profit": -652,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 121,
+   "hours": 19,
+   "late": 0,
+   "overtime": 3,
+   "cost": 860,
+   "dayCost": 860,
+   "profit": -524,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 93,
+   "hours": 17.2,
+   "late": 0,
+   "overtime": 1.3,
+   "cost": 785,
+   "dayCost": 785,
+   "profit": -449,
+   "invalid": null
+  },
+  "gap": 203,
+  "ruleGap": 128
+ },
+ "24e2ec53": {
+  "trucks": 5,
+  "stops": 80,
+  "asRun": {
+   "trucks": 5,
+   "miles": 461,
+   "hours": 60.4,
+   "late": 11,
+   "overtime": 20.4,
+   "cost": 2641,
+   "dayCost": 2733,
+   "profit": -2061,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 5,
+   "miles": 265,
+   "hours": 39.6,
+   "late": 1,
+   "overtime": 0.7,
+   "cost": 1921,
+   "dayCost": 1930,
+   "profit": -1258,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 5,
+   "miles": 220,
+   "hours": 36.8,
+   "late": 2,
+   "overtime": 0.2,
+   "cost": 1801,
+   "dayCost": 1818,
+   "profit": -1146,
+   "invalid": null
+  },
+  "gap": 915,
+  "ruleGap": 804
+ },
+ "21f3ce17": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 128,
+   "hours": 26.5,
+   "late": 16,
+   "overtime": 10.5,
+   "cost": 1044,
+   "dayCost": 1179,
+   "profit": -843,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 149,
+   "hours": 20.7,
+   "late": 5,
+   "overtime": 4.7,
+   "cost": 934,
+   "dayCost": 976,
+   "profit": -640,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 120,
+   "hours": 18.9,
+   "late": 3,
+   "overtime": 2.9,
+   "cost": 857,
+   "dayCost": 882,
+   "profit": -546,
+   "invalid": null
+  },
+  "gap": 297,
+  "ruleGap": 203
+ },
+ "80532a58": {
+  "trucks": 6,
+  "stops": 96,
+  "asRun": {
+   "trucks": 6,
+   "miles": 562,
+   "hours": 70.2,
+   "late": 12,
+   "overtime": 22.2,
+   "cost": 3126,
+   "dayCost": 3227,
+   "profit": -2421,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 6,
+   "miles": 344,
+   "hours": 49.3,
+   "late": 0,
+   "overtime": 2.6,
+   "cost": 2376,
+   "dayCost": 2376,
+   "profit": -1570,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 6,
+   "miles": 274,
+   "hours": 44.7,
+   "late": 1,
+   "overtime": 0.1,
+   "cost": 2187,
+   "dayCost": 2195,
+   "profit": -1389,
+   "invalid": null
+  },
+  "gap": 1032,
+  "ruleGap": 851
+ },
+ "5c8f748e": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 131,
+   "hours": 20.1,
+   "late": 6,
+   "overtime": 4.1,
+   "cost": 899,
+   "dayCost": 949,
+   "profit": -613,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 119,
+   "hours": 18.8,
+   "late": 1,
+   "overtime": 2.8,
+   "cost": 853,
+   "dayCost": 862,
+   "profit": -526,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 84,
+   "hours": 16.9,
+   "late": 1,
+   "overtime": 0.9,
+   "cost": 767,
+   "dayCost": 775,
+   "profit": -439,
+   "invalid": null
+  },
+  "gap": 174,
+  "ruleGap": 87
+ },
+ "14670cfa": {
+  "trucks": 6,
+  "stops": 84,
+  "asRun": {
+   "trucks": 6,
+   "miles": 532,
+   "hours": 71.8,
+   "late": 4,
+   "overtime": 23.8,
+   "cost": 3128,
+   "dayCost": 3162,
+   "profit": -2456,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 5,
+   "miles": 336,
+   "hours": 45.2,
+   "late": 0,
+   "overtime": 5.4,
+   "cost": 2272,
+   "dayCost": 2272,
+   "profit": -1566,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 5,
+   "miles": 285,
+   "hours": 42.3,
+   "late": 2,
+   "overtime": 2.8,
+   "cost": 2143,
+   "dayCost": 2160,
+   "profit": -1455,
+   "invalid": null
+  },
+  "gap": 1002,
+  "ruleGap": 890
+ },
+ "f7a18f8c": {
+  "trucks": 5,
+  "stops": 90,
+  "asRun": {
+   "trucks": 5,
+   "miles": 473,
+   "hours": 62,
+   "late": 14,
+   "overtime": 22,
+   "cost": 2695,
+   "dayCost": 2812,
+   "profit": -2056,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 5,
+   "miles": 320,
+   "hours": 45.8,
+   "late": 3,
+   "overtime": 5.9,
+   "cost": 2132,
+   "dayCost": 2157,
+   "profit": -1401,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 5,
+   "miles": 259,
+   "hours": 42.4,
+   "late": 2,
+   "overtime": 2.9,
+   "cost": 1978,
+   "dayCost": 1995,
+   "profit": -1239,
+   "invalid": null
+  },
+  "gap": 818,
+  "ruleGap": 655
+ },
+ "a8b132be": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 134,
+   "hours": 22.4,
+   "late": 2,
+   "overtime": 6.4,
+   "cost": 956,
+   "dayCost": 973,
+   "profit": -637,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 131,
+   "hours": 19.5,
+   "late": 0,
+   "overtime": 3.5,
+   "cost": 884,
+   "dayCost": 884,
+   "profit": -548,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 110,
+   "hours": 18.3,
+   "late": 0,
+   "overtime": 2.3,
+   "cost": 830,
+   "dayCost": 830,
+   "profit": -494,
+   "invalid": null
+  },
+  "gap": 143,
+  "ruleGap": 89
+ },
+ "3390f7a1": {
+  "trucks": 5,
+  "stops": 80,
+  "asRun": {
+   "trucks": 5,
+   "miles": 464,
+   "hours": 62.4,
+   "late": 19,
+   "overtime": 22.4,
+   "cost": 2692,
+   "dayCost": 2851,
+   "profit": -2179,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 5,
+   "miles": 318,
+   "hours": 43.1,
+   "late": 2,
+   "overtime": 3.7,
+   "cost": 2065,
+   "dayCost": 2082,
+   "profit": -1410,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 5,
+   "miles": 271,
+   "hours": 40.2,
+   "late": 0,
+   "overtime": 1.4,
+   "cost": 1941,
+   "dayCost": 1941,
+   "profit": -1269,
+   "invalid": null
+  },
+  "gap": 911,
+  "ruleGap": 769
+ },
+ "341f6eee": {
+  "trucks": 1,
+  "stops": 20,
+  "asRun": {
+   "trucks": 1,
+   "miles": 52,
+   "hours": 9.2,
+   "late": 1,
+   "overtime": 1.2,
+   "cost": 414,
+   "dayCost": 422,
+   "profit": -254,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 1,
+   "miles": 66,
+   "hours": 9.8,
+   "late": 0,
+   "overtime": 1.8,
+   "cost": 445,
+   "dayCost": 445,
+   "profit": -277,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 1,
+   "miles": 45,
+   "hours": 8.5,
+   "late": 0,
+   "overtime": 0.5,
+   "cost": 389,
+   "dayCost": 389,
+   "profit": -221,
+   "invalid": null
+  },
+  "gap": 34,
+  "ruleGap": -23
+ },
+ "4e19f47e": {
+  "trucks": 6,
+  "stops": 120,
+  "asRun": {
+   "trucks": 6,
+   "miles": 684,
+   "hours": 101.4,
+   "late": 45,
+   "overtime": 53.4,
+   "cost": 4004,
+   "dayCost": 4382,
+   "profit": -3374,
+   "invalid": "Truck 1 runs past the 14-hour day"
+  },
+  "rule": {
+   "trucks": 6,
+   "miles": 396,
+   "hours": 59.1,
+   "late": 3,
+   "overtime": 11.1,
+   "cost": 2668,
+   "dayCost": 2694,
+   "profit": -1686,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 6,
+   "miles": 325,
+   "hours": 54.5,
+   "late": 2,
+   "overtime": 6.8,
+   "cost": 2477,
+   "dayCost": 2493,
+   "profit": -1485,
+   "invalid": null
+  },
+  "gap": 1888,
+  "ruleGap": 1688
+ },
+ "af7e27bd": {
+  "trucks": 6,
+  "stops": 84,
+  "asRun": {
+   "trucks": 6,
+   "miles": 569,
+   "hours": 69.4,
+   "late": 9,
+   "overtime": 21.4,
+   "cost": 3118,
+   "dayCost": 3194,
+   "profit": -2488,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 6,
+   "miles": 329,
+   "hours": 45,
+   "late": 1,
+   "overtime": 1.9,
+   "cost": 2258,
+   "dayCost": 2266,
+   "profit": -1561,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 6,
+   "miles": 282,
+   "hours": 42,
+   "late": 0,
+   "overtime": 0.7,
+   "cost": 2133,
+   "dayCost": 2133,
+   "profit": -1428,
+   "invalid": null
+  },
+  "gap": 1061,
+  "ruleGap": 928
+ },
+ "de0df31b": {
+  "trucks": 6,
+  "stops": 96,
+  "asRun": {
+   "trucks": 6,
+   "miles": 611,
+   "hours": 72,
+   "late": 15,
+   "overtime": 24,
+   "cost": 3229,
+   "dayCost": 3355,
+   "profit": -2549,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 5,
+   "miles": 378,
+   "hours": 51,
+   "late": 0,
+   "overtime": 11,
+   "cost": 2457,
+   "dayCost": 2457,
+   "profit": -1650,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 5,
+   "miles": 305,
+   "hours": 46.5,
+   "late": 0,
+   "overtime": 6.5,
+   "cost": 2265,
+   "dayCost": 2265,
+   "profit": -1458,
+   "invalid": null
+  },
+  "gap": 1090,
+  "ruleGap": 899
+ },
+ "6eee3e49": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 134,
+   "hours": 23.5,
+   "late": 10,
+   "overtime": 7.5,
+   "cost": 980,
+   "dayCost": 1064,
+   "profit": -728,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 164,
+   "hours": 21.6,
+   "late": 1,
+   "overtime": 5.6,
+   "cost": 973,
+   "dayCost": 982,
+   "profit": -646,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 115,
+   "hours": 18.6,
+   "late": 1,
+   "overtime": 2.6,
+   "cost": 842,
+   "dayCost": 850,
+   "profit": -514,
+   "invalid": null
+  },
+  "gap": 214,
+  "ruleGap": 83
+ },
+ "f8af4e84": {
+  "trucks": 2,
+  "stops": 40,
+  "asRun": {
+   "trucks": 2,
+   "miles": 137,
+   "hours": 20.6,
+   "late": 4,
+   "overtime": 4.6,
+   "cost": 917,
+   "dayCost": 951,
+   "profit": -615,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 133,
+   "hours": 19.7,
+   "late": 1,
+   "overtime": 3.7,
+   "cost": 890,
+   "dayCost": 898,
+   "profit": -562,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 96,
+   "hours": 17.4,
+   "late": 2,
+   "overtime": 2.6,
+   "cost": 794,
+   "dayCost": 810,
+   "profit": -474,
+   "invalid": null
+  },
+  "gap": 140,
+  "ruleGap": 52
+ },
+ "4b9f1044": {
+  "trucks": 4,
+  "stops": 32,
+  "asRun": {
+   "trucks": 4,
+   "miles": 344,
+   "hours": 40.3,
+   "late": 1,
+   "overtime": 9,
+   "cost": 1985,
+   "dayCost": 2020,
+   "profit": -900,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 229,
+   "hours": 25,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1435,
+   "dayCost": 1435,
+   "profit": -315,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 221,
+   "hours": 24.6,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1414,
+   "dayCost": 1414,
+   "profit": -294,
+   "invalid": null
+  },
+  "gap": 606,
+  "ruleGap": 584
+ },
+ "77be2c51": {
+  "trucks": 2,
+  "stops": 16,
+  "asRun": {
+   "trucks": 2,
+   "miles": 147,
+   "hours": 13.5,
+   "late": 0,
+   "overtime": 0,
+   "cost": 784,
+   "dayCost": 784,
+   "profit": -224,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 104,
+   "hours": 12.1,
+   "late": 0,
+   "overtime": 0,
+   "cost": 694,
+   "dayCost": 694,
+   "profit": -134,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 93,
+   "hours": 11.7,
+   "late": 0,
+   "overtime": 0,
+   "cost": 669,
+   "dayCost": 669,
+   "profit": -109,
+   "invalid": null
+  },
+  "gap": 115,
+  "ruleGap": 91
+ },
+ "41656af4": {
+  "trucks": 1,
+  "stops": 8,
+  "asRun": {
+   "trucks": 1,
+   "miles": 47,
+   "hours": 6.6,
+   "late": 0,
+   "overtime": 0,
+   "cost": 357,
+   "dayCost": 357,
+   "profit": -77,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 1,
+   "miles": 44,
+   "hours": 5.8,
+   "late": 0,
+   "overtime": 0,
+   "cost": 330,
+   "dayCost": 330,
+   "profit": -50,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 1,
+   "miles": 44,
+   "hours": 5.7,
+   "late": 0,
+   "overtime": 0,
+   "cost": 328,
+   "dayCost": 328,
+   "profit": -48,
+   "invalid": null
+  },
+  "gap": 28,
+  "ruleGap": 27
+ },
+ "adb2660f": {
+  "trucks": 12,
+  "stops": 96,
+  "asRun": {
+   "trucks": 12,
+   "miles": 1868,
+   "hours": 128.9,
+   "late": 7,
+   "overtime": 32.9,
+   "cost": 7172,
+   "dayCost": 7417,
+   "profit": -4057,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 10,
+   "miles": 814,
+   "hours": 79.5,
+   "late": 0,
+   "overtime": 1.1,
+   "cost": 4576,
+   "dayCost": 4576,
+   "profit": -1216,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 10,
+   "miles": 777,
+   "hours": 77.7,
+   "late": 0,
+   "overtime": 1.3,
+   "cost": 4481,
+   "dayCost": 4481,
+   "profit": -1121,
+   "invalid": null
+  },
+  "gap": 2936,
+  "ruleGap": 2841
+ },
+ "1ded79f0": {
+  "trucks": 3,
+  "stops": 24,
+  "asRun": {
+   "trucks": 3,
+   "miles": 215,
+   "hours": 33.9,
+   "late": 4,
+   "overtime": 9.9,
+   "cost": 1537,
+   "dayCost": 1677,
+   "profit": -837,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 180,
+   "hours": 19.6,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1110,
+   "dayCost": 1110,
+   "profit": -270,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 162,
+   "hours": 18.3,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1051,
+   "dayCost": 1051,
+   "profit": -211,
+   "invalid": null
+  },
+  "gap": 626,
+  "ruleGap": 568
+ },
+ "d2dfea14": {
+  "trucks": 4,
+  "stops": 32,
+  "asRun": {
+   "trucks": 4,
+   "miles": 392,
+   "hours": 43.1,
+   "late": 3,
+   "overtime": 11.1,
+   "cost": 2119,
+   "dayCost": 2224,
+   "profit": -1104,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 248,
+   "hours": 26.7,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1503,
+   "dayCost": 1503,
+   "profit": -383,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 219,
+   "hours": 24.5,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1409,
+   "dayCost": 1409,
+   "profit": -289,
+   "invalid": null
+  },
+  "gap": 815,
+  "ruleGap": 721
+ },
+ "b4f0095a": {
+  "trucks": 3,
+  "stops": 24,
+  "asRun": {
+   "trucks": 3,
+   "miles": 224,
+   "hours": 23.9,
+   "late": 2,
+   "overtime": 1.1,
+   "cost": 1278,
+   "dayCost": 1348,
+   "profit": -508,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 216,
+   "hours": 20.5,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1175,
+   "dayCost": 1175,
+   "profit": -335,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 158,
+   "hours": 18.3,
+   "late": 0,
+   "overtime": 0,
+   "cost": 1046,
+   "dayCost": 1046,
+   "profit": -206,
+   "invalid": null
+  },
+  "gap": 302,
+  "ruleGap": 173
+ },
+ "1c66da4a": {
+  "trucks": 2,
+  "stops": 16,
+  "asRun": {
+   "trucks": 2,
+   "miles": 119,
+   "hours": 12.6,
+   "late": 0,
+   "overtime": 0,
+   "cost": 725,
+   "dayCost": 725,
+   "profit": -165,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 95,
+   "hours": 11.7,
+   "late": 0,
+   "overtime": 0,
+   "cost": 673,
+   "dayCost": 673,
+   "profit": -113,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 86,
+   "hours": 11.4,
+   "late": 0,
+   "overtime": 0,
+   "cost": 654,
+   "dayCost": 654,
+   "profit": -94,
+   "invalid": null
+  },
+  "gap": 71,
+  "ruleGap": 52
+ },
+ "5e2cbd20": {
+  "trucks": 2,
+  "stops": 16,
+  "asRun": {
+   "trucks": 2,
+   "miles": 158,
+   "hours": 18.5,
+   "late": 0,
+   "overtime": 3.9,
+   "cost": 932,
+   "dayCost": 932,
+   "profit": -372,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 116,
+   "hours": 12.5,
+   "late": 0,
+   "overtime": 0,
+   "cost": 718,
+   "dayCost": 718,
+   "profit": -158,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 102,
+   "hours": 12,
+   "late": 0,
+   "overtime": 0,
+   "cost": 688,
+   "dayCost": 688,
+   "profit": -128,
+   "invalid": null
+  },
+  "gap": 244,
+  "ruleGap": 214
+ },
+ "31baf728": {
+  "trucks": 4,
+  "stops": 40,
+  "asRun": {
+   "trucks": 4,
+   "miles": 379,
+   "hours": 50.4,
+   "late": 10,
+   "overtime": 18.4,
+   "cost": 4475,
+   "dayCost": 5055,
+   "profit": -2735,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 267,
+   "hours": 40.2,
+   "late": 4,
+   "overtime": 8.2,
+   "cost": 3338,
+   "dayCost": 3570,
+   "profit": -1250,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 267,
+   "hours": 40.2,
+   "late": 0,
+   "overtime": 8.2,
+   "cost": 3038,
+   "dayCost": 3038,
+   "profit": -718,
+   "invalid": null
+  },
+  "gap": 2017,
+  "ruleGap": 1485
+ },
+ "40f46eeb": {
+  "trucks": 4,
+  "stops": 40,
+  "asRun": {
+   "trucks": 4,
+   "miles": 376,
+   "hours": 45.9,
+   "late": 5,
+   "overtime": 13.9,
+   "cost": 3854,
+   "dayCost": 4144,
+   "profit": -1824,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 4,
+   "miles": 280,
+   "hours": 40.6,
+   "late": 1,
+   "overtime": 8.6,
+   "cost": 3150,
+   "dayCost": 3208,
+   "profit": -888,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 4,
+   "miles": 248,
+   "hours": 39.5,
+   "late": 0,
+   "overtime": 8.4,
+   "cost": 2978,
+   "dayCost": 2978,
+   "profit": -658,
+   "invalid": null
+  },
+  "gap": 1166,
+  "ruleGap": 935
+ },
+ "50831b99": {
+  "trucks": 2,
+  "stops": 20,
+  "asRun": {
+   "trucks": 2,
+   "miles": 124,
+   "hours": 19.7,
+   "late": 1,
+   "overtime": 3.7,
+   "cost": 1563,
+   "dayCost": 1621,
+   "profit": -461,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 2,
+   "miles": 121,
+   "hours": 19.7,
+   "late": 0,
+   "overtime": 3.7,
+   "cost": 1482,
+   "dayCost": 1482,
+   "profit": -322,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 2,
+   "miles": 88,
+   "hours": 18.5,
+   "late": 0,
+   "overtime": 2.5,
+   "cost": 1380,
+   "dayCost": 1380,
+   "profit": -220,
+   "invalid": null
+  },
+  "gap": 241,
+  "ruleGap": 140
+ },
+ "6e5276e2": {
+  "trucks": 5,
+  "stops": 50,
+  "asRun": {
+   "trucks": 5,
+   "miles": 517,
+   "hours": 61.6,
+   "late": 4,
+   "overtime": 21.6,
+   "cost": 4931,
+   "dayCost": 5163,
+   "profit": -2263,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 5,
+   "miles": 321,
+   "hours": 49.7,
+   "late": 2,
+   "overtime": 9.7,
+   "cost": 3906,
+   "dayCost": 4022,
+   "profit": -1122,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 5,
+   "miles": 307,
+   "hours": 49.3,
+   "late": 0,
+   "overtime": 9.3,
+   "cost": 3715,
+   "dayCost": 3715,
+   "profit": -815,
+   "invalid": null
+  },
+  "gap": 1448,
+  "ruleGap": 1141
+ },
+ "fd7c52bc": {
+  "trucks": 3,
+  "stops": 30,
+  "asRun": {
+   "trucks": 3,
+   "miles": 265,
+   "hours": 32.3,
+   "late": 6,
+   "overtime": 8.3,
+   "cost": 2925,
+   "dayCost": 3273,
+   "profit": -1533,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 185,
+   "hours": 29.6,
+   "late": 0,
+   "overtime": 5.6,
+   "cost": 2231,
+   "dayCost": 2231,
+   "profit": -491,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 151,
+   "hours": 28.4,
+   "late": 0,
+   "overtime": 5.8,
+   "cost": 2126,
+   "dayCost": 2126,
+   "profit": -386,
+   "invalid": null
+  },
+  "gap": 1147,
+  "ruleGap": 1042
+ },
+ "218f1c52": {
+  "trucks": 3,
+  "stops": 30,
+  "asRun": {
+   "trucks": 3,
+   "miles": 233,
+   "hours": 37.6,
+   "late": 2,
+   "overtime": 13.6,
+   "cost": 2870,
+   "dayCost": 2986,
+   "profit": -1246,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 192,
+   "hours": 29.8,
+   "late": 1,
+   "overtime": 5.8,
+   "cost": 2328,
+   "dayCost": 2386,
+   "profit": -646,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 166,
+   "hours": 28.9,
+   "late": 0,
+   "overtime": 6.2,
+   "cost": 2173,
+   "dayCost": 2173,
+   "profit": -433,
+   "invalid": null
+  },
+  "gap": 813,
+  "ruleGap": 600
+ },
+ "2c0dcc71": {
+  "trucks": 3,
+  "stops": 30,
+  "asRun": {
+   "trucks": 3,
+   "miles": 244,
+   "hours": 35.7,
+   "late": 1,
+   "overtime": 11.7,
+   "cost": 2710,
+   "dayCost": 2768,
+   "profit": -1028,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 170,
+   "hours": 29.1,
+   "late": 0,
+   "overtime": 5.1,
+   "cost": 2184,
+   "dayCost": 2184,
+   "profit": -444,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 147,
+   "hours": 28.4,
+   "late": 0,
+   "overtime": 6.8,
+   "cost": 2122,
+   "dayCost": 2122,
+   "profit": -382,
+   "invalid": null
+  },
+  "gap": 646,
+  "ruleGap": 584
+ },
+ "40bfd277": {
+  "trucks": 8,
+  "stops": 64,
+  "asRun": {
+   "trucks": 8,
+   "miles": 954,
+   "hours": 93.1,
+   "late": 8,
+   "overtime": 29.1,
+   "cost": 7870,
+   "dayCost": 8334,
+   "profit": -4622,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 7,
+   "miles": 527,
+   "hours": 67.8,
+   "late": 0,
+   "overtime": 11.8,
+   "cost": 5390,
+   "dayCost": 5390,
+   "profit": -1678,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 7,
+   "miles": 466,
+   "hours": 65.7,
+   "late": 0,
+   "overtime": 9.7,
+   "cost": 5202,
+   "dayCost": 5202,
+   "profit": -1490,
+   "invalid": null
+  },
+  "gap": 3131,
+  "ruleGap": 2944
+ },
+ "ec4f7130": {
+  "trucks": 3,
+  "stops": 30,
+  "asRun": {
+   "trucks": 3,
+   "miles": 233,
+   "hours": 34,
+   "late": 4,
+   "overtime": 10,
+   "cost": 2828,
+   "dayCost": 3060,
+   "profit": -1320,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 184,
+   "hours": 29.6,
+   "late": 2,
+   "overtime": 5.6,
+   "cost": 2379,
+   "dayCost": 2495,
+   "profit": -755,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 177,
+   "hours": 29.3,
+   "late": 0,
+   "overtime": 5.3,
+   "cost": 2206,
+   "dayCost": 2206,
+   "profit": -466,
+   "invalid": null
+  },
+  "gap": 853,
+  "ruleGap": 565
+ },
+ "fddff0da": {
+  "trucks": 3,
+  "stops": 30,
+  "asRun": {
+   "trucks": 3,
+   "miles": 263,
+   "hours": 35.4,
+   "late": 3,
+   "overtime": 11.4,
+   "cost": 2867,
+   "dayCost": 3041,
+   "profit": -1301,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 205,
+   "hours": 30.3,
+   "late": 0,
+   "overtime": 6.3,
+   "cost": 2291,
+   "dayCost": 2291,
+   "profit": -551,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 173,
+   "hours": 29.2,
+   "late": 0,
+   "overtime": 6.6,
+   "cost": 2195,
+   "dayCost": 2195,
+   "profit": -455,
+   "invalid": null
+  },
+  "gap": 846,
+  "ruleGap": 749
+ },
+ "745edb75": {
+  "trucks": 3,
+  "stops": 30,
+  "asRun": {
+   "trucks": 3,
+   "miles": 229,
+   "hours": 34.3,
+   "late": 6,
+   "overtime": 10.3,
+   "cost": 2990,
+   "dayCost": 3338,
+   "profit": -1598,
+   "invalid": null
+  },
+  "rule": {
+   "trucks": 3,
+   "miles": 181,
+   "hours": 29.6,
+   "late": 0,
+   "overtime": 5.6,
+   "cost": 2228,
+   "dayCost": 2228,
+   "profit": -488,
+   "invalid": null
+  },
+  "par": {
+   "trucks": 3,
+   "miles": 148,
+   "hours": 28.3,
+   "late": 0,
+   "overtime": 4.8,
+   "cost": 2118,
+   "dayCost": 2118,
+   "profit": -378,
+   "invalid": null
+  },
+  "gap": 1221,
+  "ruleGap": 1111
+ }
+}

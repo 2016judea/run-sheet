@@ -1,0 +1,6 @@
+{
+  "functions": {
+    "api/plan.js": { "includeFiles": "api/_rs/**", "maxDuration": 60, "memory": 1024 }
+  },
+  "redirects": [{ "source": "/api/_rs/:path*", "destination": "/", "permanent": false }]
+}

@@ -251,21 +251,23 @@
     };
   }
 
-  // par: savings merge under capacity, then relocate/2-opt on profit
-  function solveRoutes(M, day) {
+  // par: savings merge under capacity, then relocate/2-opt on profit.
+  // init (optional): start the local search from this plan instead of the savings merge
+  // (a full uploaded day, where the merge strands stops); passes caps the local search.
+  function solveRoutes(M, day, init, passes) {
     const veh = M.vehicles[day.veh];
     const score = plan => {
       const s = simRoutes(M, day, plan);
       if (s.invalid && !(s.invalid.includes("on the dock"))) return -1e12 - 1e6 * s.hours;
       return s.profit - 1e-3 * s.miles - (day.mayRoll ? 0 : 1e6 * s.missed.length);
     };
-    let routes = day.orders.map(o => [o.id]);
+    let routes = init ? init.map(r => r.slice()).filter(r => r.length) : day.orders.map(o => [o.id]);
     const byId = Object.fromEntries(day.orders.map(o => [o.id, o]));
     const fits = ids => ids.reduce((s, i) => s + byId[i].lb, 0) <= veh.payload_lb &&
       (!veh.pallet_positions || ids.reduce((s, i) => s + byId[i].pallets, 0) <= veh.pallet_positions);
     // savings, ordered by Clarke-Wright saving
     const sav = [];
-    for (const a of day.orders) for (const b of day.orders) if (a.id < b.id)
+    if (!init) for (const a of day.orders) for (const b of day.orders) if (a.id < b.id)
       sav.push([roadMi(M, day.yard, a) + roadMi(M, day.yard, b) - roadMi(M, a, b), a.id, b.id]);
     sav.sort((p, q) => q[0] - p[0]);
     for (const [, a, b] of sav) {
@@ -297,8 +299,9 @@
       }
     }
     // local search: relocate any stop anywhere (including off the board), keep if better
+    if (init) while (routes.length < day.trucks) routes.push([]);
     let cur = score(routes), improved = true, guard = 0;
-    while (improved && guard++ < 60) {
+    while (improved && guard++ < (passes || 60)) {
       improved = false;
       const all = routes.flat();
       for (const id of all.concat(day.orders.map(o => o.id).filter(i => !all.includes(i)))) {
@@ -515,7 +518,7 @@
     LOADS_MODE, DAY_START_HR,
     generate: (M, seg, seed) => LOADS_MODE.has(seg) ? genLoads(M, seg, seed) : feasible(M, genRoutes(M, seg, seed)),
     simulate: (M, day, plan) => day.mode === "loads" ? simLoads(M, day, plan) : simRoutes(M, day, plan),
-    solve: (M, day) => day.mode === "loads" ? solveLoads(M, day) : solveRoutes(M, day),
+    solve: (M, day, init, passes) => day.mode === "loads" ? solveLoads(M, day) : solveRoutes(M, day, init, passes),
     row, has,
   };
   if (typeof module !== "undefined") module.exports = api; else root.RunSheet = api;

@@ -17,7 +17,9 @@
   "use strict";
   const E = typeof module !== "undefined" ? require("./engine.js") : root.RunSheet;
 
-  function routesRule(M, day) {
+  // lenient: on a day where no truck count runs clean (an uploaded day the model prices
+  // past the 14-hour clock), still return the plan with the fewest late stops
+  function routesRule(M, day, lenient) {
     const veh = M.vehicles[day.veh];
     const byId = Object.fromEntries(day.orders.map(o => [o.id, o]));
     const ang = o => Math.atan2(o.y - day.yard.y, o.x - day.yard.x);
@@ -69,9 +71,10 @@
       const plan = slices(k).map(sequence);
       while (plan.length < day.trucks) plan.push([]);
       const s = E.simulate(M, day, plan);
-      if (s.invalid) continue;
-      if (!best || s.late < best.s.late) best = { plan, s, k };
-      if (s.late === 0) break;            // fewest trucks that runs the day on time
+      if (s.invalid && !lenient) continue;
+      const bad = s.invalid ? 1 : 0;
+      if (!best || bad < best.bad || (bad === best.bad && (s.late < best.s.late || (s.late === best.s.late && s.hours < best.s.hours - 1e-6 && bad)))) best = { plan, s, k, bad };
+      if (s.late === 0 && !s.invalid) break;   // fewest trucks that runs the day on time
     }
     return best ? best.plan : null;
   }
@@ -103,6 +106,6 @@
     return chain;
   }
 
-  const api = { rule: (M, day) => day.mode === "loads" ? loadsRule(M, day) : routesRule(M, day) };
+  const api = { rule: (M, day, opts) => day.mode === "loads" ? loadsRule(M, day) : routesRule(M, day, opts && opts.lenient) };
   if (typeof module !== "undefined") module.exports = api; else root.RunSheetRules = api;
 })(this);

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>JTC Logistics · Run Sheet</title>
+<meta name="description" content="A day shaped like JTC Logistics's, planned three ways.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
+<!-- bm-posthog:begin v2 — shared across every Vercel prototype; source ~/.claude/skills/site-analytics/posthog_snippet.html. ?me=1 opts this browser out on this site (?me=0 undoes); ?me=1&next=host1,host2 walks the opt-out across sites; headless (navigator.webdriver) never loads it. -->
+<script>
+(function(w,d){var S="run-sheet",K="bm_me",me=false,u,p,n;
+try{u=new URLSearchParams(location.search);p=u.get("me");n=u.get("next");}catch(e){}
+try{if(p==="1"){localStorage.setItem(K,"1");}else if(p==="0"){localStorage.removeItem(K);}}catch(e){}
+if(p==="1"){d.cookie=K+"=1; path=/; max-age=63072000; SameSite=Lax";}else if(p==="0"){d.cookie=K+"=; path=/; max-age=0; SameSite=Lax";}
+try{me=localStorage.getItem(K)==="1";}catch(e){}
+if(!me&&/(?:^|; )bm_me=1/.test(d.cookie))me=true;
+if(p==="1"&&n){var h=n.split(","),f=h.shift();if(/^[a-z0-9.-]+$/.test(f)&&(f.slice(-11)===".vercel.app"||f==="brickandmortar.dev"||f==="readglean.com")){location.replace("https://"+f+"/?me=1"+(h.length?"&next="+h.join(","):""));}}
+if(navigator.webdriver===true)return;
+!function(t,e){var o,n,p,r;e.__SV||(w.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify setPersonProperties reset get_distinct_id get_session_id alias set_config startSessionRecording stopSessionRecording opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing captureException getFeatureFlag isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(d,w.posthog||[]);
+posthog.init("phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx",{api_host:"https://us.i.posthog.com",person_profiles:"identified_only",persistence:"localStorage+cookie",opt_out_capturing_by_default:me});
+if(me){posthog.opt_out_capturing();}else{if(p==="0")posthog.opt_in_capturing();posthog.register({site:S});}
+})(window,document);
+</script>
+<!-- bm-posthog:end -->
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../">← the seven days, played out</a>
+<div class="dayhead"><p class="mono">Run Sheet · for JTC Logistics</p>
+<div class="rec"><p class="mono">your FMCSA filing · USDOT 4404753</p>
+<p class="org">JTC Logistics</p>
+<p>4 power units, 4 drivers, Hugo. Every driver runs inside 100 miles. Filed 2026-03-31.</p>
+<a href="https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&amp;query_type=queryCarrierSnapshot&amp;query_param=USDOT&amp;query_string=4404753">your record on SAFER</a></div>
+<h1>A day shaped like yours.</h1>
+<p class="lede">4 trucks out of your yard, 100 stops of local delivery around it, priced with published wages and costs. Then put in a real day of yours below.</p></div>
+<div id="out" aria-live="polite"><p class="mono">planning…</p></div>
+<div id="sheets"></div>
+<section class="yours" id="yours">
+<p class="mono">your own day</p>
+<h2>Put in yesterday's stops.</h2>
+<form id="dayform">
+<label>Stop list, as a CSV out of your route app or a spreadsheet<input type="file" name="file" accept=".csv,.tsv,.txt,text/csv"></label>
+<label>…or paste it<textarea name="csv" spellcheck="false" placeholder="route,stop,address,city,zip,window_start,window_end,weight&#10;Route 1,1,1200 W Broadway Ave,Minneapolis,55411,9:00,11:00,240"></textarea></label>
+<div class="row2"><label>Kind of work<select name="seg"><option value="courier" selected>Courier, vans</option><option value="route_dist">Route delivery, box trucks</option><option value="final_mile_bulky">Furniture &amp; appliance, two-person crews</option><option value="building_supply">Lumber &amp; building supply, flatbeds</option><option value="ltl_pd">LTL pickup &amp; delivery</option></select></label>
+<label>Trucks you had<input name="trucks" type="number" min="1" max="12" inputmode="numeric"></label></div>
+<label>Yard address (or lat, lon)<input name="yard" autocomplete="street-address" placeholder="where every truck starts and ends"></label>
+<button class="btn" type="submit">Plan my day</button>
+<p class="cols">Reads columns called address (or lat and lon), city, zip, route or driver, stop or sequence, window start and end, weight, pallets, service minutes. Only address is needed. With a route column, “as run” is your own routes. Up to 120 stops. Nothing you put in is kept.</p>
+</form>
+<p id="err" role="alert"></p>
+</section>
+<p class="others">Seven more days are played out start to finish on <a href="../../">the front page</a>: courier, route delivery, LTL, furniture, building supply, truckload, drayage.</p>
+<script>window.RS_DAY={"day":{"seg":"courier","trucks":4,"yard":{"lat":45.204607860833,"lon":-92.953203855164},"stops":[{"label":"Stop 01","lat":45.12028,"lon":-93.03396,"open":11.5,"close":14.5},{"label":"Stop 02","lat":45.16521,"lon":-92.90156,"open":11.5,"close":14.5},{"label":"Stop 03","lat":45.23177,"lon":-93.10095},{"label":"Stop 04","lat":45.3128,"lon":-93.04144},{"label":"Stop 05","lat":45.2395,"lon":-92.97936},{"label":"Stop 06","lat":45.10769,"lon":-92.85091},{"label":"Stop 07","lat":45.31043,"lon":-93.06739},{"label":"Stop 08","lat":45.25901,"lon":-93.03916},{"label":"Stop 09","lat":45.27269,"lon":-93.05159},{"label":"Stop 10","lat":45.23383,"lon":-92.82201,"open":11.5,"close":14.5},{"label":"Stop 11","lat":45.09519,"lon":-92.87735},{"label":"Stop 12","lat":45.19452,"lon":-93.08911,"open":8.5,"close":11.5},{"label":"Stop 13","lat":45.28498,"lon":-92.82365,"open":13,"close":16},{"label":"Stop 14","lat":45.30292,"lon":-92.88824},{"label":"Stop 15","lat":45.25232,"lon":-92.97591},{"label":"Stop 16","lat":45.17874,"lon":-93.00481},{"label":"Stop 17","lat":45.29818,"lon":-93.11216},{"label":"Stop 18","lat":45.28479,"lon":-92.84766},{"label":"Stop 19","lat":45.1417,"lon":-92.84156,"open":11,"close":14},{"label":"Stop 20","lat":45.25714,"lon":-93.05131},{"label":"Stop 21","lat":45.24329,"lon":-92.87496},{"label":"Stop 22","lat":45.26346,"lon":-92.85431},{"label":"Stop 23","lat":45.24389,"lon":-93.05446},{"label":"Stop 24","lat":45.16937,"lon":-92.98198},{"label":"Stop 25","lat":45.10868,"lon":-92.96289},{"label":"Stop 26","lat":45.29163,"lon":-92.93064},{"label":"Stop 27","lat":45.31338,"lon":-92.87592},{"label":"Stop 28","lat":45.28889,"lon":-92.94555},{"label":"Stop 29","lat":45.12548,"lon":-93.10481},{"label":"Stop 30","lat":45.20547,"lon":-93.10825},{"label":"Stop 31","lat":45.28307,"lon":-93.1061},{"label":"Stop 32","lat":45.1304,"lon":-93.06176,"open":13.5,"close":16.5},{"label":"Stop 33","lat":45.21422,"lon":-93.03141},{"label":"Stop 34","lat":45.16764,"lon":-92.89551},{"label":"Stop 35","lat":45.11305,"lon":-93.05325,"open":11.5,"close":14.5},{"label":"Stop 36","lat":45.19898,"lon":-92.96461},{"label":"Stop 37","lat":45.31511,"lon":-93.10345},{"label":"Stop 38","lat":45.10442,"lon":-92.96121},{"label":"Stop 39","lat":45.19381,"lon":-93.09926},{"label":"Stop 40","lat":45.27799,"lon":-93.02641},{"label":"Stop 41","lat":45.28934,"lon":-92.80086,"open":8,"close":11},{"label":"Stop 42","lat":45.20265,"lon":-92.85684},{"label":"Stop 43","lat":45.16404,"lon":-92.9974},{"label":"Stop 44","lat":45.23561,"lon":-92.92462},{"label":"Stop 45","lat":45.29384,"lon":-92.97356,"open":11,"close":14},{"label":"Stop 46","lat":45.18656,"lon":-93.02155},{"label":"Stop 47","lat":45.30148,"lon":-92.90865},{"label":"Stop 48","lat":45.24502,"lon":-92.94411,"open":11.5,"close":14.5},{"label":"Stop 49","lat":45.14274,"lon":-92.95352},{"label":"Stop 50","lat":45.20185,"lon":-93.09857},{"label":"Stop 51","lat":45.18773,"lon":-92.97993},{"label":"Stop 52","lat":45.2809,"lon":-92.92023},{"label":"Stop 53","lat":45.27338,"lon":-93.09963,"open":13,"close":16},{"label":"Stop 54","lat":45.09281,"lon":-92.93407,"open":13.5,"close":16.5},{"label":"Stop 55","lat":45.27764,"lon":-92.90732},{"label":"Stop 56","lat":45.18862,"lon":-93.03843},{"label":"Stop 57","lat":45.29423,"lon":-92.84313,"open":12,"close":15},{"label":"Stop 58","lat":45.19865,"lon":-92.98883},{"label":"Stop 59","lat":45.25198,"lon":-92.99318},{"label":"Stop 60","lat":45.27641,"lon":-92.97622,"open":8,"close":11},{"label":"Stop 61","lat":45.20237,"lon":-93.03591},{"label":"Stop 62","lat":45.1665,"lon":-92.95289},{"label":"Stop 63","lat":45.13482,"lon":-92.9014},{"label":"Stop 64","lat":45.10105,"lon":-92.9347},{"label":"Stop 65","lat":45.16606,"lon":-92.93465,"open":8,"close":11},{"label":"Stop 66","lat":45.13931,"lon":-92.86315,"open":11,"close":14},{"label":"Stop 67","lat":45.241,"lon":-92.87441},{"label":"Stop 68","lat":45.09767,"lon":-93.08115},{"label":"Stop 69","lat":45.15415,"lon":-93.09767},{"label":"Stop 70","lat":45.2302,"lon":-93.02354},{"label":"Stop 71","lat":45.27354,"lon":-92.8603,"open":10,"close":13},{"label":"Stop 72","lat":45.12789,"lon":-92.83295},{"label":"Stop 73","lat":45.17123,"lon":-93.05576},{"label":"Stop 74","lat":45.16448,"lon":-92.9629},{"label":"Stop 75","lat":45.23939,"lon":-93.03887,"open":9,"close":12},{"label":"Stop 76","lat":45.1908,"lon":-92.9278},{"label":"Stop 77","lat":45.26028,"lon":-92.86031},{"label":"Stop 78","lat":45.23458,"lon":-93.0339},{"label":"Stop 79","lat":45.25745,"lon":-93.02704},{"label":"Stop 80","lat":45.2056,"lon":-93.08828},{"label":"Stop 81","lat":45.16176,"lon":-92.88837},{"label":"Stop 82","lat":45.29062,"lon":-92.79725},{"label":"Stop 83","lat":45.15961,"lon":-92.98253},{"label":"Stop 84","lat":45.18585,"lon":-92.80624},{"label":"Stop 85","lat":45.19463,"lon":-92.8169},{"label":"Stop 86","lat":45.13815,"lon":-93.03188},{"label":"Stop 87","lat":45.10641,"lon":-92.93869,"open":10,"close":13},{"label":"Stop 88","lat":45.20986,"lon":-93.09844},{"label":"Stop 89","lat":45.31501,"lon":-92.91192},{"label":"Stop 90","lat":45.25464,"lon":-93.06464},{"label":"Stop 91","lat":45.30596,"lon":-93.10335,"open":11.5,"close":14.5},{"label":"Stop 92","lat":45.2511,"lon":-92.99022},{"label":"Stop 93","lat":45.13263,"lon":-92.80501},{"label":"Stop 94","lat":45.23989,"lon":-92.83431},{"label":"Stop 95","lat":45.1005,"lon":-92.83318},{"label":"Stop 96","lat":45.2629,"lon":-93.00516},{"label":"Stop 97","lat":45.2213,"lon":-92.9453},{"label":"Stop 98","lat":45.27397,"lon":-92.99837},{"label":"Stop 99","lat":45.10932,"lon":-92.93101},{"label":"Stop 100","lat":45.24059,"lon":-92.9042,"open":8,"close":11}]},"price":50,"stripePk":"pk_live_51TUvvcBzD4mN8eOD28H6oQkFwFHwF1SLtWxN1vHRmnSxntWFefgd33mEIVmjv8ekxWgkZft3OpPlzmVXMIeHPBwj003998hjTf","token":"f03494e6"};</script><script src="../../day.js"></script>
+<footer><a href="../../">Run Sheet</a> · the same day run two ways, for seven kinds of small fleet, priced with published numbers.</footer>
+</div>
+</body>
+</html>
