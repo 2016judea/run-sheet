@@ -107,6 +107,7 @@
     const gapWord = r.gap > 0 ? `<b>${usd(r.gap)}</b> on this one day.` : "No money left on the table this day.";
     const ruleLine = r.gap > 0 ? (r.ruleGap >= r.gap - 1 ? "A dispatcher with a map and a pen gets all of it." : `A dispatcher with a map and a pen gets ${usd(Math.max(0, r.ruleGap))} of it.`) : "";
     const note = [r.fromFile ? "“As run” is your file's own routes." : "No route column, so “as run” is the usual way: stops dealt out in the order they came in, each truck nearest-next.",
+      r.unrouted ? `${r.unrouted} stop${r.unrouted > 1 ? "s" : ""} had no route in the file and ${r.unrouted > 1 ? "were" : "was"} put on the nearest truck's run.` : "",
       r.weights ? "" : "No weights in the file, so only the clock limits a truck.",
       r.missed ? `${r.missed} address${r.missed > 1 ? "es" : ""} didn't find a map location and ${r.missed > 1 ? "were" : "was"} left out.` : ""].filter(Boolean).join(" ");
     $("#out").innerHTML = `

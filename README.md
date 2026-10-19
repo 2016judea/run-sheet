@@ -64,6 +64,7 @@ solver. The page draws both as you scroll; nothing to press. Each story links it
 
     python3 build.py              # model/data/*.csv -> site/model.json, trainer + doors -> site/
     python3 scripts/deploy.py     # Vercel REST deploy (needs VERCEL_TOKEN)
+    npm test                      # node --test: the upload engine and /api/plan, offline
 
 - `model/SCHEMA.md` — the data model. Read first.
 - `model/data/*.csv` — every number, each row with a source URL and a confidence.

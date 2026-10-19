@@ -24,7 +24,7 @@ async function geocode(address) {
 }
 
 async function locate(list) {
-  const todo = list.filter((s) => !(isFinite(s.lat) && isFinite(s.lon)) && s.address);
+  const todo = list.filter((s) => !U.hasLoc(s) && s.address);
   let i = 0;
   const worker = async () => { while (i < todo.length) { const s = todo[i++]; const g = await geocode(String(s.address).slice(0, 200)); if (g) Object.assign(s, g); } };
   await Promise.all(Array.from({ length: 10 }, worker));
@@ -50,10 +50,10 @@ module.exports = async (req, res) => {
   }
   const yard = inp.yard || {};
   const list = stops.map((s) => ({ ...s }));
-  const geocoded = await locate(list.concat(yard.address && !isFinite(yard.lat) ? [yard] : []));
-  const missed = list.filter((s) => !(isFinite(s.lat) && isFinite(s.lon))).length;
+  const geocoded = await locate(list.concat(yard.address && !U.hasLoc(yard) ? [yard] : []));
+  const missed = list.filter((s) => !U.hasLoc(s)).length;
   try {
-    const out = U.run(M, { seg: inp.seg, trucks: inp.trucks, yard: isFinite(yard.lat) ? yard : null, stops: list });
+    const out = U.run(M, { seg: inp.seg, trucks: inp.trucks, yard: U.hasLoc(yard) ? yard : null, stops: list });
     const full = out.full; delete out.full;
     res.setHeader("Cache-Control", "private, no-store");
     res.status(200).json({ ...out, geocoded, missed, paid, ...(paid ? { full } : {}) });

@@ -1,0 +1,8 @@
+{
+  "name": "run-sheet",
+  "private": true,
+  "description": "Run Sheet: an operator's own day, planned three ways. Tests cover the upload engine and the /api/plan handler, offline.",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

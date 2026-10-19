@@ -33,6 +33,13 @@
     return E.row(M, "rate_per_stop", [seg]).value;
   }
 
+  // a finite number, or NaN. Number() alone turns null and "" into 0, and the global isFinite
+  // then passes them: a {lat:null} stop landed 4,500 miles from the yard and open:null became
+  // a midnight window (2026-10-18).
+  const num = v => (v == null || v === "" || typeof v === "boolean") ? NaN : Number(v);
+  const fin = v => Number.isFinite(num(v));
+  const hasLoc = s => !!s && fin(s.lat) && fin(s.lon);
+
   // lat/lon -> miles east/north of the yard (fine at city scale)
   function project(yard, p) {
     const k = Math.cos(yard.lat * Math.PI / 180);
@@ -41,10 +48,10 @@
 
   function buildDay(M, inp) {
     const seg = SEGS.includes(inp.seg) ? inp.seg : "courier";
-    const stops = (inp.stops || []).filter(s => isFinite(s.lat) && isFinite(s.lon));
+    const stops = (inp.stops || []).filter(hasLoc).map(s => ({ ...s, lat: num(s.lat), lon: num(s.lon) }));
     if (!stops.length) throw new Error("No stops with a location.");
     if (stops.length > MAX_STOPS) throw new Error(`One day at a time: ${MAX_STOPS} stops at most (this file has ${stops.length}).`);
-    const yard = inp.yard && isFinite(inp.yard.lat) ? inp.yard
+    const yard = hasLoc(inp.yard) ? { lat: num(inp.yard.lat), lon: num(inp.yard.lon) }
       : { lat: stops.reduce((a, s) => a + s.lat, 0) / stops.length, lon: stops.reduce((a, s) => a + s.lon, 0) / stops.length };
     const veh = M.vehicles[VEH[seg]];
     const svc = E.row(M, SVC[seg], [seg]).value;
@@ -53,11 +60,11 @@
     let trucks = Math.round(Number(inp.trucks)) || routesIn.length || Math.ceil(stops.length / typ);
     trucks = Math.max(1, Math.min(MAX_TRUCKS, trucks, stops.length));
     const orders = stops.map((s, i) => {
-      const open = isFinite(s.open) ? s.open : DAY0, close = isFinite(s.close) ? s.close : DAY1 + 2;
+      const open = fin(s.open) ? num(s.open) : DAY0, close = fin(s.close) ? num(s.close) : DAY1 + 2;
       const o = {
         id: i + 1, ...project(yard, s), label: String(s.label || "").slice(0, 80),
         lb: Math.max(0, Number(s.lb) || 0), pallets: Math.max(0, Math.round(Number(s.pallets) || 0)),
-        open, close, tight: isFinite(s.open) || isFinite(s.close),
+        open, close, tight: fin(s.open) || fin(s.close),
         service: Number(s.service) > 0 ? Number(s.service) : svc,
         route: s.route || "", seq: Number(s.seq) || i,
       };
@@ -72,6 +79,19 @@
     };
     day.asRun = routesIn.length ? routesIn.map(r => orders.filter(o => o.route === r).sort((a, b) => a.seq - b.seq).map(o => o.id)) : null;
     if (day.asRun && day.asRun.length > trucks) day.trucks = Math.min(MAX_TRUCKS, day.asRun.length);
+    // A row with an empty route cell in a file that has routes still went out on some truck. Before
+    // 2026-10-18 it was left off every as-run route, charged to 'as run' as a stop on the dock, and
+    // the gap to par was invented. It is dealt, in file order, onto the end of the route that ends nearest it.
+    day.unrouted = 0;
+    if (day.asRun) {
+      const byId = Object.fromEntries(orders.map(o => [o.id, o]));
+      for (const o of orders.filter(o => !o.route)) {
+        const end = ids => ids.length ? byId[ids[ids.length - 1]] : day.yard;
+        let best = 0, bd = Infinity;
+        day.asRun.forEach((ids, k) => { const e = end(ids), d = Math.hypot(e.x - o.x, e.y - o.y); if (d < bd) { bd = d; best = k; } });
+        day.asRun[best].push(o.id); day.unrouted++;
+      }
+    }
     return day;
   }
 
@@ -140,7 +160,7 @@
     const gap = Math.round(value(day, P) - value(day, A)), ruleGap = Math.round(value(day, Ru) - value(day, A));
     return {
       seg: day.seg, stops: day.orders.length, trucksAvail: day.trucks, weights: day.weights,
-      fromFile: !!day.asRun, yard: day.yardLatLon,
+      fromFile: !!day.asRun, unrouted: day.unrouted, yard: day.yardLatLon,
       points: day.orders.map(o => [+o.x.toFixed(3), +o.y.toFixed(3)]),
       asRun: summary(day, A), rule: summary(day, Ru), par: summary(day, P), gap, ruleGap,
       full: { asRun: sheets(day, A), rule: sheets(day, Ru), par: sheets(day, P) },
@@ -153,6 +173,6 @@
     return !E.simulate(M, day, day.asRun || usual(M, day)).invalid;
   }
 
-  const api = { run, buildDay, asRunValid, SEGS, MAX_STOPS };
+  const api = { run, buildDay, asRunValid, hasLoc, SEGS, MAX_STOPS };
   if (typeof module !== "undefined") module.exports = api; else root.RunSheetUpload = api;
 })(this);
