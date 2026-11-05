@@ -5,7 +5,7 @@ Aidan said "send" 2026-10-07. Apex Capital rows are held: Apex runs its own load
 board (NextLOAD), which the list's competitor rule excludes."""
 import csv, sys, time, datetime
 from pathlib import Path
-sys.path.insert(0, str(Path.home()/"Desktop/bricks/scripts/outreach"))
+sys.path.insert(0, str(Path.home()/"Desktop/workspace/bricks/scripts/outreach"))
 from send_mailgun import send
 H = Path(__file__).resolve().parent
 HOLD = {"mario-tarradell", "dax-johnson"}

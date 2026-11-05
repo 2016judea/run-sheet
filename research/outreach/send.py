@@ -4,7 +4,7 @@
 Aidan said "send the emails" 2026-10-06."""
 import csv, sys, time, datetime
 from pathlib import Path
-sys.path.insert(0, str(Path.home()/"Desktop/bricks/scripts/outreach"))
+sys.path.insert(0, str(Path.home()/"Desktop/workspace/bricks/scripts/outreach"))
 from send_mailgun import send
 H = Path(__file__).resolve().parent
 dry = "--dry" in sys.argv
